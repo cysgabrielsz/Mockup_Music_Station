@@ -1,13 +1,13 @@
 ﻿namespace Mockup_Music_Station
 {
-    partial class Form1
+    partial class MenuInicio
     {
-        /// <summary>
+        /// <summary> 
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
         /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
@@ -20,9 +20,9 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Código gerado pelo Designer de Componentes
 
-        /// <summary>
+        /// <summary> 
         /// Método necessário para suporte ao Designer - não modifique 
         /// o conteúdo deste método com o editor de código.
         /// </summary>
@@ -30,14 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // MenuInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MenuInicio";
+            this.Size = new System.Drawing.Size(135, 219);
             this.ResumeLayout(false);
 
         }
@@ -45,4 +43,3 @@
         #endregion
     }
 }
-

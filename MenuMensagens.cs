@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class Form1 : Form
+    public partial class MenuMensagens : UserControl
     {
-        public Form1()
+        public MenuMensagens()
         {
             InitializeComponent();
         }
