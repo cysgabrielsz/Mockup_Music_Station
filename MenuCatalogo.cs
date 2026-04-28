@@ -15,24 +15,50 @@ namespace Mockup_Music_Station
     {
         public MenuCatalogo()
         {
-            InitializeComponent();
-                ArredondarBotao(BtnInstrumentos, 8);
-                ArredondarBotao(btnCargos, 8);
-                ArredondarBotao(btnServicos, 8);        
+            InitializeComponent();   
+            panelnavegacao.Visible = false;
         }
 
-        private void ArredondarBotao(Button btn, int raio)
+        private void BtnInstrumentos_Click(object sender, EventArgs e)
         {
-            GraphicsPath path = new GraphicsPath();
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = BtnInstrumentos.Height;
+            panelnavegacao.Top = BtnInstrumentos.Top;
+            panelnavegacao.Left = BtnInstrumentos.Left;
+            BtnInstrumentos.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+        private void btnServicos_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnServicos.Height;
+            panelnavegacao.Top = btnServicos.Top;
+            panelnavegacao.Left = btnServicos.Left;
+            btnServicos.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.CloseFigure();
+        private void btnCargos_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnCargos.Height;
+            panelnavegacao.Top = btnCargos.Top;
+            panelnavegacao.Left = btnCargos.Left;
+            btnCargos.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            btn.Region = new Region(path);
+        private void BtnInstrumentos_Leave(object sender, EventArgs e)
+        {
+            BtnInstrumentos.BackColor = Color.FromArgb(61,30, 98);
+        }
+
+        private void btnServicos_Leave(object sender, EventArgs e)
+        {
+            btnServicos.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnCargos_Leave(object sender, EventArgs e)
+        {
+            btnCargos.BackColor = Color.FromArgb(61, 30, 98);
         }
     }
 }

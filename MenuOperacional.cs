@@ -16,22 +16,37 @@ namespace Mockup_Music_Station
         public MenuOperacional()
         {
             InitializeComponent();
-            ArredondarBotao(btnLocacoes, 8);
-            ArredondarBotao(btnPedidos, 8);
+            panelnavegacao.Visible = false;
         }
 
-        private void ArredondarBotao(Button btn, int raio)
+
+
+        private void btnPedidos_Click(object sender, EventArgs e)
         {
-            GraphicsPath path = new GraphicsPath();
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnPedidos.Height;
+            panelnavegacao.Top = btnPedidos.Top;
+            panelnavegacao.Left = btnPedidos.Left;
+            btnPedidos.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+        private void btnLocacoes_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnLocacoes.Height;
+            panelnavegacao.Top = btnLocacoes.Top;
+            panelnavegacao.Left = btnLocacoes.Left;
+            btnLocacoes.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.CloseFigure();
+        private void btnPedidos_Leave(object sender, EventArgs e)
+        {
+            btnPedidos.BackColor = Color.FromArgb(61, 30, 98);
+        }
 
-            btn.Region = new Region(path);
+        private void btnLocacoes_Leave(object sender, EventArgs e)
+        {
+            btnLocacoes.BackColor = Color.FromArgb(61, 30, 98);
         }
     }
 }

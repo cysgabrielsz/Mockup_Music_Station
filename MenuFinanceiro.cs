@@ -16,23 +16,50 @@ namespace Mockup_Music_Station
         public MenuFinanceiro()
         {
             InitializeComponent();
-            ArredondarBotao(btnFormasPagamento, 8);
-            ArredondarBotao(btnPagamentos, 8);
-            ArredondarBotao(btnTransações, 8);
+            panelnavegacao.Visible = false;
+
         }
 
-        private void ArredondarBotao(Button btn, int raio)
+        private void btnPagamentos_Click(object sender, EventArgs e)
         {
-            GraphicsPath path = new GraphicsPath();
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnPagamentos.Height;
+            panelnavegacao.Top = btnPagamentos.Top;
+            panelnavegacao.Left = btnPagamentos.Left;
+            btnPagamentos.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+        private void btnTransações_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnTransações.Height;
+            panelnavegacao.Top = btnTransações.Top;
+            panelnavegacao.Left = btnTransações.Left;
+            btnTransações.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.CloseFigure();
+        private void btnFormasPagamento_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnFormasPagamento.Height;
+            panelnavegacao.Top = btnFormasPagamento.Top;
+            panelnavegacao.Left = btnFormasPagamento.Left;
+            btnFormasPagamento.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            btn.Region = new Region(path);
+        private void btnPagamentos_Leave(object sender, EventArgs e)
+        {
+            btnPagamentos.BackColor = Color.FromArgb(61,30,98);
+        }
+
+        private void btnTransações_Leave(object sender, EventArgs e)
+        {
+            btnTransações.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnFormasPagamento_Leave(object sender, EventArgs e)
+        {
+            btnFormasPagamento.BackColor = Color.FromArgb(61, 30, 98);
         }
     }
 }

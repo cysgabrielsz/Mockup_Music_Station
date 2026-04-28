@@ -17,25 +17,79 @@ namespace Mockup_Music_Station
         public MenuPessoas()
         {
             InitializeComponent();
-                ArredondarBotao(BtnUsuarios, 8);
-                ArredondarBotao(btnClientes, 8);
-                ArredondarBotao(btnProfissionais, 8);
-                ArredondarBotao(btnAdministradores, 8);
-                ArredondarBotao(btnEmpresa, 8);
+            panelnavegacao.Visible = false;
         }
 
-        private void ArredondarBotao(Button btn, int raio)
+       
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
         {
-            GraphicsPath path = new GraphicsPath();
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = BtnUsuarios.Height;
+            panelnavegacao.Top = BtnUsuarios.Top;
+            panelnavegacao.Left = BtnUsuarios.Left;
+            BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+        private void btnProfissionais_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnProfissionais.Height;
+            panelnavegacao.Top = btnProfissionais.Top;
+            panelnavegacao.Left = btnProfissionais.Left;
+            btnProfissionais.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            path.CloseFigure();
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnClientes.Height;
+            panelnavegacao.Top = btnClientes.Top;
+            panelnavegacao.Left = btnClientes.Left;
+            btnClientes.BackColor = Color.FromArgb(146, 117, 182);
+        }
 
-            btn.Region = new Region(path);
+        private void btnAdministradores_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnAdministradores.Height;
+            panelnavegacao.Top = btnAdministradores.Top;
+            panelnavegacao.Left = btnAdministradores.Left;
+            btnAdministradores.BackColor = Color.FromArgb(146, 117, 182);
+        }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            panelnavegacao.Visible = true;
+            panelnavegacao.Height = btnEmpresa.Height;
+            panelnavegacao.Top = btnEmpresa.Top;
+            panelnavegacao.Left = btnEmpresa.Left;
+            btnEmpresa.BackColor = Color.FromArgb(146, 117, 182);
+        }
+
+        private void BtnUsuarios_Leave(object sender, EventArgs e)
+        {
+            BtnUsuarios.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnProfissionais_Leave(object sender, EventArgs e)
+        {
+            btnProfissionais.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnClientes_Leave(object sender, EventArgs e)
+        {
+            btnClientes.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnAdministradores_Leave(object sender, EventArgs e)
+        {
+            btnAdministradores.BackColor = Color.FromArgb(61, 30, 98);
+        }
+
+        private void btnEmpresa_Leave(object sender, EventArgs e)
+        {
+            btnEmpresa.BackColor = Color.FromArgb(61, 30, 98);
         }
     }
 }
