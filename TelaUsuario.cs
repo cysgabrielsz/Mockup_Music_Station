@@ -75,7 +75,7 @@ namespace Mockup_Music_Station
             try
             {               
                 UsuariosTableAdapter usuarios = new UsuariosTableAdapter();
-                usuarios.Insert(nome, email, senha);
+                usuarios.Insert(nome, email, senha, DateTime.Now);
                 LimparElementos();
                 AtualizarLista();
             }
