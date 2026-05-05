@@ -36,7 +36,7 @@
             // 
             // btnPagamentos
             // 
-            this.btnPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnPagamentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPagamentos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnPagamentos.FlatAppearance.BorderSize = 0;
@@ -54,7 +54,7 @@
             // 
             // btnTransações
             // 
-            this.btnTransações.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnTransações.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnTransações.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransações.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnTransações.FlatAppearance.BorderSize = 0;
@@ -72,7 +72,7 @@
             // 
             // btnFormasPagamento
             // 
-            this.btnFormasPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnFormasPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnFormasPagamento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormasPagamento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnFormasPagamento.FlatAppearance.BorderSize = 0;

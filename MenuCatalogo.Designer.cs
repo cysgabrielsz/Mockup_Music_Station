@@ -36,7 +36,7 @@
             // 
             // BtnInstrumentos
             // 
-            this.BtnInstrumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.BtnInstrumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.BtnInstrumentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnInstrumentos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.BtnInstrumentos.FlatAppearance.BorderSize = 0;
@@ -54,7 +54,7 @@
             // 
             // btnServicos
             // 
-            this.btnServicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnServicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnServicos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnServicos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnServicos.FlatAppearance.BorderSize = 0;
@@ -72,7 +72,7 @@
             // 
             // btnCargos
             // 
-            this.btnCargos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnCargos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnCargos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCargos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnCargos.FlatAppearance.BorderSize = 0;

@@ -14,6 +14,7 @@ namespace Mockup_Music_Station
 {
     public partial class MenuPessoas : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public MenuPessoas()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Mockup_Music_Station
 
        
 
+        
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             panelnavegacao.Visible = true;
@@ -29,6 +31,10 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = BtnUsuarios.Top;
             panelnavegacao.Left = BtnUsuarios.Left;
             BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaUsuario());
+
+
         }
 
         private void btnProfissionais_Click(object sender, EventArgs e)

@@ -105,6 +105,11 @@
     <Compile Include="MenuPessoas.Designer.cs">
       <DependentUpon>MenuPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusicStationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaUsuario.cs">
@@ -149,6 +154,17 @@
     <EmbeddedResource Include="TelaUsuario.resx">
       <DependentUpon>TelaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MusicStationDataSet.xsc">
+      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MusicStationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MusicStationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MusicStationDataSet.xss">
+      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

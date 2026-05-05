@@ -36,7 +36,7 @@
             // 
             // BtnChats
             // 
-            this.BtnChats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.BtnChats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.BtnChats.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnChats.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.BtnChats.FlatAppearance.BorderSize = 0;
@@ -54,7 +54,7 @@
             // 
             // btnNotificacoes
             // 
-            this.btnNotificacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnNotificacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnNotificacoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNotificacoes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnNotificacoes.FlatAppearance.BorderSize = 0;
@@ -72,7 +72,7 @@
             // 
             // btnAvaliacoes
             // 
-            this.btnAvaliacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnAvaliacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnAvaliacoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAvaliacoes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnAvaliacoes.FlatAppearance.BorderSize = 0;

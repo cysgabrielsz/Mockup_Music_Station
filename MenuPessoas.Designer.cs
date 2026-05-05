@@ -38,7 +38,7 @@
             // 
             // BtnUsuarios
             // 
-            this.BtnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.BtnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.BtnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.BtnUsuarios.FlatAppearance.BorderSize = 0;
@@ -56,7 +56,7 @@
             // 
             // btnProfissionais
             // 
-            this.btnProfissionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnProfissionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnProfissionais.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfissionais.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnProfissionais.FlatAppearance.BorderSize = 0;
@@ -74,7 +74,7 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnClientes.FlatAppearance.BorderSize = 0;
@@ -92,7 +92,7 @@
             // 
             // btnAdministradores
             // 
-            this.btnAdministradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnAdministradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnAdministradores.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdministradores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnAdministradores.FlatAppearance.BorderSize = 0;
@@ -110,7 +110,7 @@
             // 
             // btnEmpresa
             // 
-            this.btnEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnEmpresa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmpresa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnEmpresa.FlatAppearance.BorderSize = 0;

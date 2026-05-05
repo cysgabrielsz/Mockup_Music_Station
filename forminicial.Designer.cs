@@ -32,8 +32,8 @@
             this.panelFundo = new System.Windows.Forms.Panel();
             this.panelConteudo = new System.Windows.Forms.Panel();
             this.panelMenu2 = new System.Windows.Forms.Panel();
-            this.panelnavegacao = new System.Windows.Forms.Panel();
             this.panelConfig = new ReaLTaiizor.Controls.Panel();
+            this.panelnavegacao = new System.Windows.Forms.Panel();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -86,15 +86,6 @@
             this.panelMenu2.Size = new System.Drawing.Size(177, 496);
             this.panelMenu2.TabIndex = 1;
             // 
-            // panelnavegacao
-            // 
-            this.panelnavegacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelnavegacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelnavegacao.Location = new System.Drawing.Point(0, 0);
-            this.panelnavegacao.Name = "panelnavegacao";
-            this.panelnavegacao.Size = new System.Drawing.Size(3, 103);
-            this.panelnavegacao.TabIndex = 28;
-            // 
             // panelConfig
             // 
             this.panelConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
@@ -110,8 +101,18 @@
             this.panelConfig.TabIndex = 26;
             this.panelConfig.Text = "panel2";
             // 
+            // panelnavegacao
+            // 
+            this.panelnavegacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelnavegacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelnavegacao.Location = new System.Drawing.Point(0, 0);
+            this.panelnavegacao.Name = "panelnavegacao";
+            this.panelnavegacao.Size = new System.Drawing.Size(3, 103);
+            this.panelnavegacao.TabIndex = 28;
+            // 
             // btnConfiguracoes
             // 
+            this.btnConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
             this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfiguracoes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,12 +125,13 @@
             this.btnConfiguracoes.TabIndex = 29;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.UseVisualStyleBackColor = false;
             this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             this.btnConfiguracoes.Leave += new System.EventHandler(this.btnConfiguracoes_Leave);
             // 
             // btnDashboard
             // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,7 +144,7 @@
             this.btnDashboard.TabIndex = 28;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
@@ -170,7 +172,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.panelMenu.Location = new System.Drawing.Point(7, 90);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(164, 229);
@@ -189,7 +191,7 @@
             this.panelTopicos.Controls.Add(this.BtnInicio);
             this.panelTopicos.Location = new System.Drawing.Point(177, 4);
             this.panelTopicos.Name = "panelTopicos";
-            this.panelTopicos.Size = new System.Drawing.Size(724, 59);
+            this.panelTopicos.Size = new System.Drawing.Size(724, 51);
             this.panelTopicos.TabIndex = 2;
             // 
             // panelMenuTopo
@@ -205,7 +207,7 @@
             // 
             this.btnMensagens.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMensagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnMensagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnMensagens.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnMensagens.FlatAppearance.BorderSize = 0;
             this.btnMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -223,7 +225,7 @@
             // 
             this.btnFinanceiro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnFinanceiro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnFinanceiro.FlatAppearance.BorderSize = 0;
             this.btnFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,7 +243,7 @@
             // 
             this.btnOperacional.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOperacional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnOperacional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnOperacional.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnOperacional.FlatAppearance.BorderSize = 0;
             this.btnOperacional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,7 +261,7 @@
             // 
             this.btnCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnCatalogo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnCatalogo.FlatAppearance.BorderSize = 0;
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -277,7 +279,7 @@
             // 
             this.btnPessoas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnPessoas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnPessoas.FlatAppearance.BorderSize = 0;
             this.btnPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -293,7 +295,7 @@
             // 
             // BtnInicio
             // 
-            this.BtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.BtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.BtnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.BtnInicio.FlatAppearance.BorderSize = 0;
             this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -311,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(901, 495);
             this.Controls.Add(this.panelTopicos);
             this.Controls.Add(this.panelMenu2);

@@ -23,7 +23,6 @@ namespace Mockup_Music_Station
         }
 
 
-
         //metodo para abrir as telas dentro do panel
         private void AbrirTela(UserControl tela)
         {
@@ -35,6 +34,31 @@ namespace Mockup_Music_Station
             panelMenu.Controls.Clear();
             tela.Dock = DockStyle.Fill;
             panelMenu.Controls.Add(tela);
+        }
+
+
+        public void ExibirUserControl(UserControl novoControle, Panel painelDestino)
+        {
+            // 1. Limpa o painel e libera a memória dos controles antigos
+            if (painelDestino.Controls.Count > 0)
+            {
+                for (int i = painelDestino.Controls.Count - 1; i >= 0; i--)
+                {
+                    Control controleAntigo = painelDestino.Controls[i];
+
+                    // Remove do painel
+                    painelDestino.Controls.Remove(controleAntigo);
+
+                    // Libera recursos e handles do Windows
+                    controleAntigo.Dispose();
+                }
+            }
+
+            // 2. Configura o novo controle para ocupar todo o espaço do painel
+            novoControle.Dock = DockStyle.Fill;
+
+            // 3. Adiciona o novo controle ao painel
+            painelDestino.Controls.Add(novoControle);
         }
 
         #region//configurando os botões do menu principal      
@@ -54,6 +78,14 @@ namespace Mockup_Music_Station
             //abre a tela de pessoas
             MenuPessoas menuPessoas = new MenuPessoas();
             AbrirTela(menuPessoas);
+
+            //abrindo a tela no painel principal
+            MenuPessoas menuPessoas1 = new MenuPessoas();
+                menuPessoas1.SolicitarAbertura = (proximatela) =>
+                { 
+                    ExibirUserControl(proximatela, panelConteudo);
+                };
+            ExibirUserControl(menuPessoas1, panelMenu);
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
@@ -157,9 +189,5 @@ namespace Mockup_Music_Station
         }
         #endregion
 
-        private void menuOperacional1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

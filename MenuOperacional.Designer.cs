@@ -35,7 +35,7 @@
             // 
             // btnPedidos
             // 
-            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnPedidos.FlatAppearance.BorderSize = 0;
@@ -53,7 +53,7 @@
             // 
             // btnLocacoes
             // 
-            this.btnLocacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.btnLocacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.btnLocacoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLocacoes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnLocacoes.FlatAppearance.BorderSize = 0;
