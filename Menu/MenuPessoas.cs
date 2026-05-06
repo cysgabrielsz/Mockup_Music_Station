@@ -30,10 +30,7 @@ namespace Mockup_Music_Station
             panelnavegacao.Height = BtnUsuarios.Height;
             panelnavegacao.Top = BtnUsuarios.Top;
             panelnavegacao.Left = BtnUsuarios.Left;
-            BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);
-
-            SolicitarAbertura?.Invoke(new TelaUsuario());
-
+            BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);            
 
         }
 
@@ -44,6 +41,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnProfissionais.Top;
             panelnavegacao.Left = btnProfissionais.Left;
             btnProfissionais.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaProfissionais());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
