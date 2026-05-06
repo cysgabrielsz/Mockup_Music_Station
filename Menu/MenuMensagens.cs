@@ -24,17 +24,17 @@ namespace Mockup_Music_Station
         
         private void BtnChats_Leave(object sender, EventArgs e)
         {
-            BtnChats.BackColor = Color.FromArgb(61, 30, 98);
+            BtnChats.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnNotificacoes_Leave(object sender, EventArgs e)
         {
-            btnNotificacoes.BackColor = Color.FromArgb(61, 30, 98);
+            btnNotificacoes.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnAvaliacoes_Leave(object sender, EventArgs e)
         {
-            btnAvaliacoes.BackColor = Color.FromArgb(61, 30, 98);
+            btnAvaliacoes.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void BtnChats_Click(object sender, EventArgs e)

@@ -48,17 +48,17 @@ namespace Mockup_Music_Station
 
         private void BtnInstrumentos_Leave(object sender, EventArgs e)
         {
-            BtnInstrumentos.BackColor = Color.FromArgb(61,30, 98);
+            BtnInstrumentos.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnServicos_Leave(object sender, EventArgs e)
         {
-            btnServicos.BackColor = Color.FromArgb(61, 30, 98);
+            btnServicos.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnCargos_Leave(object sender, EventArgs e)
         {
-            btnCargos.BackColor = Color.FromArgb(61, 30, 98);
+            btnCargos.BackColor = Color.FromArgb(49, 30, 65);
         }
     }
 }

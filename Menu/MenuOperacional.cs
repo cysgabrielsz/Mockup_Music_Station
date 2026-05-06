@@ -41,12 +41,12 @@ namespace Mockup_Music_Station
 
         private void btnPedidos_Leave(object sender, EventArgs e)
         {
-            btnPedidos.BackColor = Color.FromArgb(61, 30, 98);
+            btnPedidos.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnLocacoes_Leave(object sender, EventArgs e)
         {
-            btnLocacoes.BackColor = Color.FromArgb(61, 30, 98);
+            btnLocacoes.BackColor = Color.FromArgb(49, 30, 65);
         }
     }
 }

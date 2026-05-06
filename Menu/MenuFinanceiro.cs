@@ -49,17 +49,17 @@ namespace Mockup_Music_Station
 
         private void btnPagamentos_Leave(object sender, EventArgs e)
         {
-            btnPagamentos.BackColor = Color.FromArgb(61,30,98);
+            btnPagamentos.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnTransações_Leave(object sender, EventArgs e)
         {
-            btnTransações.BackColor = Color.FromArgb(61, 30, 98);
+            btnTransações.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnFormasPagamento_Leave(object sender, EventArgs e)
         {
-            btnFormasPagamento.BackColor = Color.FromArgb(61, 30, 98);
+            btnFormasPagamento.BackColor = Color.FromArgb(49, 30, 65);
         }
     }
 }

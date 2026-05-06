@@ -32,13 +32,13 @@
             this.panelFundo = new System.Windows.Forms.Panel();
             this.panelConteudo = new System.Windows.Forms.Panel();
             this.panelMenu2 = new System.Windows.Forms.Panel();
-            this.panelConfig = new ReaLTaiizor.Controls.Panel();
-            this.panelnavegacao = new System.Windows.Forms.Panel();
-            this.btnConfiguracoes = new System.Windows.Forms.Button();
+            this.panelConfieDashboard = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnconfig = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelnavegacao = new System.Windows.Forms.Panel();
             this.panelTopicos = new System.Windows.Forms.Panel();
             this.panelMenuTopo = new System.Windows.Forms.Panel();
             this.btnMensagens = new System.Windows.Forms.Button();
@@ -47,9 +47,10 @@
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnPessoas = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
+            this.panelDesign = new System.Windows.Forms.Panel();
             this.panelFundo.SuspendLayout();
             this.panelMenu2.SuspendLayout();
-            this.panelConfig.SuspendLayout();
+            this.panelConfieDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTopicos.SuspendLayout();
@@ -77,7 +78,7 @@
             // 
             this.panelMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenu2.BackColor = System.Drawing.Color.Black;
-            this.panelMenu2.Controls.Add(this.panelConfig);
+            this.panelMenu2.Controls.Add(this.panelConfieDashboard);
             this.panelMenu2.Controls.Add(this.pictureBox1);
             this.panelMenu2.Controls.Add(this.pictureBox3);
             this.panelMenu2.Controls.Add(this.panelMenu);
@@ -86,67 +87,50 @@
             this.panelMenu2.Size = new System.Drawing.Size(177, 496);
             this.panelMenu2.TabIndex = 1;
             // 
-            // panelConfig
+            // panelConfieDashboard
             // 
-            this.panelConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
-            this.panelConfig.Controls.Add(this.panelnavegacao);
-            this.panelConfig.Controls.Add(this.btnConfiguracoes);
-            this.panelConfig.Controls.Add(this.btnDashboard);
-            this.panelConfig.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
-            this.panelConfig.Location = new System.Drawing.Point(7, 316);
-            this.panelConfig.Name = "panelConfig";
-            this.panelConfig.Padding = new System.Windows.Forms.Padding(5);
-            this.panelConfig.Size = new System.Drawing.Size(164, 103);
-            this.panelConfig.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panelConfig.TabIndex = 26;
-            this.panelConfig.Text = "panel2";
-            // 
-            // panelnavegacao
-            // 
-            this.panelnavegacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelnavegacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelnavegacao.Location = new System.Drawing.Point(0, 0);
-            this.panelnavegacao.Name = "panelnavegacao";
-            this.panelnavegacao.Size = new System.Drawing.Size(3, 103);
-            this.panelnavegacao.TabIndex = 28;
-            // 
-            // btnConfiguracoes
-            // 
-            this.btnConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
-            this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracoes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.Image")));
-            this.btnConfiguracoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 51);
-            this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(164, 52);
-            this.btnConfiguracoes.TabIndex = 29;
-            this.btnConfiguracoes.Text = "Configurações";
-            this.btnConfiguracoes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnConfiguracoes.UseVisualStyleBackColor = false;
-            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
-            this.btnConfiguracoes.Leave += new System.EventHandler(this.btnConfiguracoes_Leave);
+            this.panelConfieDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
+            this.panelConfieDashboard.Controls.Add(this.panelDesign);
+            this.panelConfieDashboard.Controls.Add(this.btnDashboard);
+            this.panelConfieDashboard.Controls.Add(this.btnconfig);
+            this.panelConfieDashboard.Location = new System.Drawing.Point(7, 319);
+            this.panelConfieDashboard.Name = "panelConfieDashboard";
+            this.panelConfieDashboard.Size = new System.Drawing.Size(164, 100);
+            this.panelConfieDashboard.TabIndex = 0;
             // 
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 50);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(164, 51);
-            this.btnDashboard.TabIndex = 28;
+            this.btnDashboard.Size = new System.Drawing.Size(164, 50);
+            this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
+            // 
+            // btnconfig
+            // 
+            this.btnconfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
+            this.btnconfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnconfig.FlatAppearance.BorderSize = 0;
+            this.btnconfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconfig.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnconfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.btnconfig.Location = new System.Drawing.Point(0, 0);
+            this.btnconfig.Name = "btnconfig";
+            this.btnconfig.Size = new System.Drawing.Size(164, 50);
+            this.btnconfig.TabIndex = 0;
+            this.btnconfig.Text = "Configurações";
+            this.btnconfig.UseVisualStyleBackColor = false;
+            this.btnconfig.Click += new System.EventHandler(this.btnconfig_Click);
+            this.btnconfig.Leave += new System.EventHandler(this.btnconfig_Leave);
             // 
             // pictureBox1
             // 
@@ -177,6 +161,15 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(164, 229);
             this.panelMenu.TabIndex = 2;
+            // 
+            // panelnavegacao
+            // 
+            this.panelnavegacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelnavegacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelnavegacao.Location = new System.Drawing.Point(0, 0);
+            this.panelnavegacao.Name = "panelnavegacao";
+            this.panelnavegacao.Size = new System.Drawing.Size(3, 103);
+            this.panelnavegacao.TabIndex = 28;
             // 
             // panelTopicos
             // 
@@ -309,6 +302,15 @@
             this.BtnInicio.UseVisualStyleBackColor = false;
             this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
+            // panelDesign
+            // 
+            this.panelDesign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelDesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelDesign.Location = new System.Drawing.Point(0, 0);
+            this.panelDesign.Name = "panelDesign";
+            this.panelDesign.Size = new System.Drawing.Size(4, 100);
+            this.panelDesign.TabIndex = 31;
+            // 
             // forminicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +324,7 @@
             this.Text = "forminicial";
             this.panelFundo.ResumeLayout(false);
             this.panelMenu2.ResumeLayout(false);
-            this.panelConfig.ResumeLayout(false);
+            this.panelConfieDashboard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelTopicos.ResumeLayout(false);
@@ -345,10 +347,11 @@
         private System.Windows.Forms.Button btnOperacional;
         private System.Windows.Forms.Button btnCatalogo;
         private System.Windows.Forms.Button btnPessoas;
-        private ReaLTaiizor.Controls.Panel panelConfig;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnConfiguracoes;
         private System.Windows.Forms.Panel panelnavegacao;
         private System.Windows.Forms.Panel panelMenuTopo;
+        private System.Windows.Forms.Panel panelConfieDashboard;
+        private System.Windows.Forms.Button btnconfig;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Panel panelDesign;
     }
 }

@@ -19,7 +19,8 @@ namespace Mockup_Music_Station
         public forminicial()
         {
             InitializeComponent();                   
-            panelnavegacao.Visible = false;           
+            panelnavegacao.Visible = false;   
+            panelDesign.Visible = false;
         }
 
 
@@ -74,7 +75,7 @@ namespace Mockup_Music_Station
             panelMenuTopo.BringToFront();
 
             //esconde o panel de navegacao
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             //abre a tela de pessoas
             MenuPessoas menuPessoas = new MenuPessoas();
             AbrirTela(menuPessoas);
@@ -96,7 +97,7 @@ namespace Mockup_Music_Station
 
             panelMenuTopo.BringToFront();
 
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             MenuCatalogo menuCatalogo = new MenuCatalogo();
             AbrirTela(menuCatalogo);
         }
@@ -109,7 +110,7 @@ namespace Mockup_Music_Station
 
             panelMenuTopo.BringToFront();
 
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             MenuOperacional menuOperacional = new MenuOperacional();
             AbrirTela(menuOperacional);
         }
@@ -122,7 +123,7 @@ namespace Mockup_Music_Station
 
             panelMenuTopo.BringToFront();
 
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             MenuFinanceiro menuFinanceiro = new MenuFinanceiro();
             AbrirTela(menuFinanceiro);
         }
@@ -135,7 +136,7 @@ namespace Mockup_Music_Station
 
             panelMenuTopo.BringToFront();
 
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             MenuInicio menuInicio = new MenuInicio();
             AbrirTela(menuInicio);
         }
@@ -148,46 +149,49 @@ namespace Mockup_Music_Station
 
             panelMenuTopo.BringToFront();
 
-            panelnavegacao.Visible = false;
+            panelDesign.Visible = false;
             MenuMensagens menuMensagens = new MenuMensagens();
             AbrirTela(menuMensagens);
         }
         #endregion
 
         #region//configurando os botões do menu
-        private void btnDashboard_Click(object sender, EventArgs e)
+
+
+        private void btnconfig_Click(object sender, EventArgs e)
         {
-            panelnavegacao.Visible = true;
-            panelnavegacao.Height = btnDashboard.Height;
-            panelnavegacao.Top = btnDashboard.Top;
-            panelnavegacao.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(146, 117, 182);
+            panelDesign.Visible = true;
+            panelDesign.Height = btnconfig.Height;
+            panelDesign.Top = btnconfig.Top;
+            panelDesign.Left = btnconfig.Left;
+            btnconfig.BackColor = Color.FromArgb(146, 117, 182);
         }
-        
-        private void btnConfiguracoes_Click(object sender, EventArgs e)
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
         {
             // Mostra o painel de navegação
-            panelnavegacao.Visible = true;
+            panelDesign.Visible = true;
             // Define a altura igual ao botão Dashboard
-            panelnavegacao.Height = btnConfiguracoes.Height;
+            panelDesign.Height = btnDashboard.Height;
             // Alinha o topo do painel com o topo do botão
-            panelnavegacao.Top = btnConfiguracoes.Top;
+            panelDesign.Top = btnDashboard.Top;
             // Alinha à esquerda do botão
-            panelnavegacao.Left = btnConfiguracoes.Left;
+            panelDesign.Left = btnDashboard.Left;
             // Muda a cor do botão
-            btnConfiguracoes.BackColor = Color.FromArgb(146, 117, 182);
+            btnDashboard.BackColor = Color.FromArgb(146, 117, 182);
+        }
+
+        
+
+        private void btnconfig_Leave(object sender, EventArgs e)
+        {
+            btnconfig.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(61, 30, 98);
-        }
-
-        private void btnConfiguracoes_Leave(object sender, EventArgs e)
-        {
-            btnConfiguracoes.BackColor = Color.FromArgb(61, 30, 98);
+            btnDashboard.BackColor = Color.FromArgb(49, 30, 65);
         }
         #endregion
-
     }
 }

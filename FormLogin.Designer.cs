@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEntrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -55,26 +54,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Animated = true;
-            this.btnEntrar.AutoRoundedCorners = true;
-            this.btnEntrar.BackColor = System.Drawing.Color.Black;
-            this.btnEntrar.BorderRadius = 21;
-            this.btnEntrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEntrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(283, 341);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.PressedColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEntrar.Size = new System.Drawing.Size(180, 45);
-            this.btnEntrar.TabIndex = 2;
-            this.btnEntrar.Text = "Entrar";
             // 
             // panel1
             // 
@@ -168,7 +147,6 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;

@@ -74,27 +74,27 @@ namespace Mockup_Music_Station
 
         private void BtnUsuarios_Leave(object sender, EventArgs e)
         {
-            BtnUsuarios.BackColor = Color.FromArgb(61, 30, 98);
+            BtnUsuarios.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnProfissionais_Leave(object sender, EventArgs e)
         {
-            btnProfissionais.BackColor = Color.FromArgb(61, 30, 98);
+            btnProfissionais.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnClientes_Leave(object sender, EventArgs e)
         {
-            btnClientes.BackColor = Color.FromArgb(61, 30, 98);
+            btnClientes.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnAdministradores_Leave(object sender, EventArgs e)
         {
-            btnAdministradores.BackColor = Color.FromArgb(61, 30, 98);
+            btnAdministradores.BackColor = Color.FromArgb(49, 30, 65);
         }
 
         private void btnEmpresa_Leave(object sender, EventArgs e)
         {
-            btnEmpresa.BackColor = Color.FromArgb(61, 30, 98);
+            btnEmpresa.BackColor = Color.FromArgb(49, 30, 65);
         }
     }
 }
