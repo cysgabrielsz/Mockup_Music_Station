@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroProfissional));
             this.panelDados = new System.Windows.Forms.Panel();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.lblPesquisa = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -37,14 +41,14 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblPesquisa = new System.Windows.Forms.Label();
             this.panelDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDados
             // 
             this.panelDados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
+            this.panelDados.Controls.Add(this.btnVoltar);
             this.panelDados.Controls.Add(this.lblPesquisa);
             this.panelDados.Controls.Add(this.btnCadastrar);
             this.panelDados.Controls.Add(this.lblTelefone);
@@ -55,10 +59,45 @@
             this.panelDados.Controls.Add(this.txtNome);
             this.panelDados.Controls.Add(this.txtSenha);
             this.panelDados.Controls.Add(this.txtEmail);
-            this.panelDados.Location = new System.Drawing.Point(0, 0);
+            this.panelDados.Location = new System.Drawing.Point(3, 3);
             this.panelDados.Name = "panelDados";
-            this.panelDados.Size = new System.Drawing.Size(399, 332);
+            this.panelDados.Size = new System.Drawing.Size(386, 329);
             this.panelDados.TabIndex = 5;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.Location = new System.Drawing.Point(3, 3);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(51, 47);
+            this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnVoltar.TabIndex = 11;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // lblPesquisa
+            // 
+            this.lblPesquisa.AutoSize = true;
+            this.lblPesquisa.BackColor = System.Drawing.Color.Transparent;
+            this.lblPesquisa.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisa.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblPesquisa.Location = new System.Drawing.Point(66, 20);
+            this.lblPesquisa.Name = "lblPesquisa";
+            this.lblPesquisa.Size = new System.Drawing.Size(268, 30);
+            this.lblPesquisa.TabIndex = 10;
+            this.lblPesquisa.Text = "Cadastros de Profissionais";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(63, 275);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(271, 40);
+            this.btnCadastrar.TabIndex = 9;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblTelefone
             // 
@@ -76,6 +115,7 @@
             // 
             this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
             this.txtTelefone.Location = new System.Drawing.Point(63, 236);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(271, 24);
@@ -121,6 +161,7 @@
             // 
             this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.White;
             this.txtNome.Location = new System.Drawing.Point(63, 69);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(271, 24);
@@ -130,6 +171,7 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.ForeColor = System.Drawing.Color.White;
             this.txtSenha.Location = new System.Drawing.Point(63, 181);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(271, 24);
@@ -139,44 +181,24 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(63, 124);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(271, 24);
             this.txtEmail.TabIndex = 3;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(63, 275);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(271, 40);
-            this.btnCadastrar.TabIndex = 9;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // lblPesquisa
-            // 
-            this.lblPesquisa.AutoSize = true;
-            this.lblPesquisa.BackColor = System.Drawing.Color.Transparent;
-            this.lblPesquisa.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisa.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lblPesquisa.Location = new System.Drawing.Point(66, 20);
-            this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(268, 30);
-            this.lblPesquisa.TabIndex = 10;
-            this.lblPesquisa.Text = "Cadastros de Profissionais";
-            // 
             // CadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelDados);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "CadastroProfissional";
-            this.Size = new System.Drawing.Size(399, 332);
+            this.Size = new System.Drawing.Size(393, 335);
             this.panelDados.ResumeLayout(false);
             this.panelDados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +216,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblPesquisa;
+        private System.Windows.Forms.PictureBox btnVoltar;
     }
 }

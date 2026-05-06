@@ -12,6 +12,7 @@ using System.Drawing.Drawing2D;
 using Mockup_Music_Station.MusicStationDataSetTableAdapters;
 using static Mockup_Music_Station.MusicStationDataSet;
 
+
 namespace Mockup_Music_Station
 {
     public partial class TelaProfissionais : UserControl
@@ -26,6 +27,7 @@ namespace Mockup_Music_Station
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
             btnLimpar.Enabled = false;
+            panelCadastros.Visible = false;
         }
 
         public void ArredondarPanel(Panel panel, int raio)
@@ -42,7 +44,7 @@ namespace Mockup_Music_Station
             panel.Region = new Region(path);
         }
 
-        private void AtualizarLista()
+        public void AtualizarLista()
         {
             lboProfissionais.Items.Clear();
             ProfissionaisTableAdapter ProfissionaisDados = new ProfissionaisTableAdapter();
@@ -86,6 +88,7 @@ namespace Mockup_Music_Station
         {
             if (btnAtualizar.Text == "habilitar edição")
             {
+                btnDeletar.Enabled = true;
                 txtNome.Enabled = true;
                 txtEmail.Enabled = true;
                 txtSenha.Enabled = true;
@@ -104,7 +107,7 @@ namespace Mockup_Music_Station
                     string senha = txtSenha.Text;
                     string nome = txtNome.Text;
                     ProfissionaisTableAdapter profissionalDados = new ProfissionaisTableAdapter();
-                    profissionalDados.Update(profissional.usuario_id, nome, email, senha, telefone);
+                    profissionalDados.Update(profissional.id_usuario, nome, email, senha, telefone);
                     MessageBox.Show("Profissional atualizado com sucesso!");
                     AtualizarLista();
                 }
@@ -113,6 +116,65 @@ namespace Mockup_Music_Station
                     MessageBox.Show("Erro ao atualizar profissional: " + ex.Message);
                 }
             }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (lboProfissionais.SelectedItem == null) return;
+
+            ProfissionaisRow profissional = lboProfissionais.SelectedItem as ProfissionaisRow;
+            if (profissional == null) return;
+
+            try
+            {
+                ProfissionaisTableAdapter profissionalDados = new ProfissionaisTableAdapter();
+                profissionalDados.Delete(profissional.id_usuario);
+                MessageBox.Show("Profissional deletado com sucesso!");
+                LimparElementos();
+                AtualizarLista();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao deletar profissional: " + ex.Message);
+            }
+        }
+
+
+        private void AbrirTela(UserControl tela)
+        {
+
+            foreach (Control controle in panelCadastros.Controls)
+            {
+                controle.Dispose();
+            }
+            panelCadastros.Controls.Clear();
+            tela.Dock = DockStyle.Fill;
+            panelCadastros.Controls.Add(tela);
+        }
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            panelCadastros.BringToFront();
+            panelCadastros.Visible = true;
+            CadastroProfissional cadastroProfissional = new CadastroProfissional(this);
+            AbrirTela(cadastroProfissional);
+
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            lboProfissionais.Items.Clear();
+            if (txtPesquisa.Text == "")
+            {
+                AtualizarLista();
+                return;
+            }
+
+            string textoDigitado = txtPesquisa.Text;
+            ProfissionaisTableAdapter profissionais = new ProfissionaisTableAdapter();
+            var dados = from linha in profissionais.GetData()
+                        where linha.nome.ToLower().Contains(textoDigitado.ToLower())
+                        select linha;
+            foreach (var profissional in dados) lboProfissionais.Items.Add(profissional);
         }
     }
 }

@@ -32,9 +32,11 @@
             this.panelConteudo = new System.Windows.Forms.Panel();
             this.panelUsuarios = new System.Windows.Forms.Panel();
             this.lblProfissionais = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.lboProfissionais = new System.Windows.Forms.ListBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelCadastros = new System.Windows.Forms.Panel();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -46,7 +48,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panelConteudo.SuspendLayout();
@@ -90,6 +91,17 @@
             this.lblProfissionais.TabIndex = 4;
             this.lblProfissionais.Text = "USUARIOS";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(52)))), ((int)(((byte)(74)))));
+            this.btnLimpar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpar.Location = new System.Drawing.Point(16, 321);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(244, 33);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.Text = "Limpar Seleção";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
             // lboProfissionais
             // 
             this.lboProfissionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
@@ -109,7 +121,7 @@
             this.lblPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.lblPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesquisa.ForeColor = System.Drawing.Color.White;
-            this.lblPesquisa.Location = new System.Drawing.Point(48, 12);
+            this.lblPesquisa.Location = new System.Drawing.Point(48, 13);
             this.lblPesquisa.Name = "lblPesquisa";
             this.lblPesquisa.Size = new System.Drawing.Size(202, 16);
             this.lblPesquisa.TabIndex = 2;
@@ -125,6 +137,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // panelCadastros
+            // 
+            this.panelCadastros.Location = new System.Drawing.Point(174, 0);
+            this.panelCadastros.Name = "panelCadastros";
+            this.panelCadastros.Size = new System.Drawing.Size(393, 335);
+            this.panelCadastros.TabIndex = 9;
+            // 
             // txtPesquisa
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +151,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(244, 27);
             this.txtPesquisa.TabIndex = 0;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // txtNome
             // 
@@ -239,17 +259,7 @@
             this.btnDeletar.TabIndex = 6;
             this.btnDeletar.Text = "Excluir";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(52)))), ((int)(((byte)(74)))));
-            this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(16, 321);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(244, 33);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.Text = "Limpar Seleção";
-            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAtualizar
             // 
@@ -273,6 +283,7 @@
             this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar Novo Usuario";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // TelaProfissionais
             // 
@@ -284,6 +295,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.panelDados);
             this.Controls.Add(this.panelConteudo);
+            this.Controls.Add(this.panelCadastros);
             this.Name = "TelaProfissionais";
             this.Size = new System.Drawing.Size(694, 391);
             this.panelConteudo.ResumeLayout(false);
@@ -319,5 +331,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Panel panelCadastros;
     }
 }

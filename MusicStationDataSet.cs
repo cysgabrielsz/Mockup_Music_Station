@@ -4,7 +4,8 @@
 
     partial class MusicStationDataSet
     {
-        public partial class  ProfissionaisRow
+
+        public partial class ProfissionaisRow
         {
             public override string ToString()
             {
