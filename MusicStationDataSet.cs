@@ -5,6 +5,14 @@
     partial class MusicStationDataSet
     {
 
+        public partial class ClientesRow
+        {
+            public override string ToString()
+            {
+                return this.nome;
+            }
+        }
+
         public partial class ProfissionaisRow
         {
             public override string ToString()

@@ -52,6 +52,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnClientes.Top;
             panelnavegacao.Left = btnClientes.Left;
             btnClientes.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaClientes());
         }
 
         private void btnAdministradores_Click(object sender, EventArgs e)

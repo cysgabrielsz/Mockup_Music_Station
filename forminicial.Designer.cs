@@ -33,6 +33,7 @@
             this.panelConteudo = new System.Windows.Forms.Panel();
             this.panelMenu2 = new System.Windows.Forms.Panel();
             this.panelConfieDashboard = new System.Windows.Forms.Panel();
+            this.panelDesign = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnconfig = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,7 +48,6 @@
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnPessoas = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
-            this.panelDesign = new System.Windows.Forms.Panel();
             this.panelFundo.SuspendLayout();
             this.panelMenu2.SuspendLayout();
             this.panelConfieDashboard.SuspendLayout();
@@ -61,9 +61,9 @@
             this.panelFundo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFundo.BackColor = System.Drawing.Color.Black;
             this.panelFundo.Controls.Add(this.panelConteudo);
-            this.panelFundo.Location = new System.Drawing.Point(183, 69);
+            this.panelFundo.Location = new System.Drawing.Point(183, 76);
             this.panelFundo.Name = "panelFundo";
-            this.panelFundo.Size = new System.Drawing.Size(706, 414);
+            this.panelFundo.Size = new System.Drawing.Size(762, 460);
             this.panelFundo.TabIndex = 0;
             // 
             // panelConteudo
@@ -71,7 +71,7 @@
             this.panelConteudo.BackColor = System.Drawing.Color.White;
             this.panelConteudo.Location = new System.Drawing.Point(3, 3);
             this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(700, 408);
+            this.panelConteudo.Size = new System.Drawing.Size(756, 454);
             this.panelConteudo.TabIndex = 0;
             // 
             // panelMenu2
@@ -82,9 +82,9 @@
             this.panelMenu2.Controls.Add(this.pictureBox1);
             this.panelMenu2.Controls.Add(this.pictureBox3);
             this.panelMenu2.Controls.Add(this.panelMenu);
-            this.panelMenu2.Location = new System.Drawing.Point(0, 4);
+            this.panelMenu2.Location = new System.Drawing.Point(0, -1);
             this.panelMenu2.Name = "panelMenu2";
-            this.panelMenu2.Size = new System.Drawing.Size(177, 496);
+            this.panelMenu2.Size = new System.Drawing.Size(177, 550);
             this.panelMenu2.TabIndex = 1;
             // 
             // panelConfieDashboard
@@ -93,10 +93,19 @@
             this.panelConfieDashboard.Controls.Add(this.panelDesign);
             this.panelConfieDashboard.Controls.Add(this.btnDashboard);
             this.panelConfieDashboard.Controls.Add(this.btnconfig);
-            this.panelConfieDashboard.Location = new System.Drawing.Point(7, 319);
+            this.panelConfieDashboard.Location = new System.Drawing.Point(4, 352);
             this.panelConfieDashboard.Name = "panelConfieDashboard";
             this.panelConfieDashboard.Size = new System.Drawing.Size(164, 100);
             this.panelConfieDashboard.TabIndex = 0;
+            // 
+            // panelDesign
+            // 
+            this.panelDesign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelDesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.panelDesign.Location = new System.Drawing.Point(0, 0);
+            this.panelDesign.Name = "panelDesign";
+            this.panelDesign.Size = new System.Drawing.Size(4, 100);
+            this.panelDesign.TabIndex = 31;
             // 
             // btnDashboard
             // 
@@ -135,7 +144,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 445);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 466);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +156,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 32);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(170, 84);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +166,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
-            this.panelMenu.Location = new System.Drawing.Point(7, 90);
+            this.panelMenu.Location = new System.Drawing.Point(4, 123);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(164, 229);
             this.panelMenu.TabIndex = 2;
@@ -182,18 +191,18 @@
             this.panelTopicos.Controls.Add(this.btnCatalogo);
             this.panelTopicos.Controls.Add(this.btnPessoas);
             this.panelTopicos.Controls.Add(this.BtnInicio);
-            this.panelTopicos.Location = new System.Drawing.Point(177, 4);
+            this.panelTopicos.Location = new System.Drawing.Point(177, 2);
             this.panelTopicos.Name = "panelTopicos";
-            this.panelTopicos.Size = new System.Drawing.Size(724, 51);
+            this.panelTopicos.Size = new System.Drawing.Size(780, 68);
             this.panelTopicos.TabIndex = 2;
             // 
             // panelMenuTopo
             // 
             this.panelMenuTopo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.panelMenuTopo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelMenuTopo.Location = new System.Drawing.Point(0, 47);
+            this.panelMenuTopo.Location = new System.Drawing.Point(0, 64);
             this.panelMenuTopo.Name = "panelMenuTopo";
-            this.panelMenuTopo.Size = new System.Drawing.Size(724, 4);
+            this.panelMenuTopo.Size = new System.Drawing.Size(780, 4);
             this.panelMenuTopo.TabIndex = 29;
             // 
             // btnMensagens
@@ -206,9 +215,9 @@
             this.btnMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMensagens.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMensagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnMensagens.Location = new System.Drawing.Point(604, 0);
+            this.btnMensagens.Location = new System.Drawing.Point(636, 0);
             this.btnMensagens.Name = "btnMensagens";
-            this.btnMensagens.Size = new System.Drawing.Size(120, 51);
+            this.btnMensagens.Size = new System.Drawing.Size(144, 67);
             this.btnMensagens.TabIndex = 8;
             this.btnMensagens.Text = "📃Mensagens";
             this.btnMensagens.UseVisualStyleBackColor = false;
@@ -224,9 +233,9 @@
             this.btnFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinanceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinanceiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnFinanceiro.Location = new System.Drawing.Point(477, 0);
+            this.btnFinanceiro.Location = new System.Drawing.Point(505, 0);
             this.btnFinanceiro.Name = "btnFinanceiro";
-            this.btnFinanceiro.Size = new System.Drawing.Size(130, 51);
+            this.btnFinanceiro.Size = new System.Drawing.Size(134, 67);
             this.btnFinanceiro.TabIndex = 8;
             this.btnFinanceiro.Text = "🪙Financeiro";
             this.btnFinanceiro.UseVisualStyleBackColor = false;
@@ -242,9 +251,9 @@
             this.btnOperacional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOperacional.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOperacional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnOperacional.Location = new System.Drawing.Point(363, 0);
+            this.btnOperacional.Location = new System.Drawing.Point(374, 0);
             this.btnOperacional.Name = "btnOperacional";
-            this.btnOperacional.Size = new System.Drawing.Size(120, 51);
+            this.btnOperacional.Size = new System.Drawing.Size(135, 67);
             this.btnOperacional.TabIndex = 8;
             this.btnOperacional.Text = "👨‍💻Operacional";
             this.btnOperacional.UseVisualStyleBackColor = false;
@@ -260,9 +269,9 @@
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.btnCatalogo.Location = new System.Drawing.Point(238, 0);
+            this.btnCatalogo.Location = new System.Drawing.Point(256, 0);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(127, 51);
+            this.btnCatalogo.Size = new System.Drawing.Size(129, 67);
             this.btnCatalogo.TabIndex = 8;
             this.btnCatalogo.Text = "📚Catalogo";
             this.btnCatalogo.UseVisualStyleBackColor = false;
@@ -280,7 +289,7 @@
             this.btnPessoas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.btnPessoas.Location = new System.Drawing.Point(115, 0);
             this.btnPessoas.Name = "btnPessoas";
-            this.btnPessoas.Size = new System.Drawing.Size(128, 51);
+            this.btnPessoas.Size = new System.Drawing.Size(145, 67);
             this.btnPessoas.TabIndex = 8;
             this.btnPessoas.Text = "🧍‍♂️Pessoas";
             this.btnPessoas.UseVisualStyleBackColor = false;
@@ -296,27 +305,18 @@
             this.BtnInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.BtnInicio.Location = new System.Drawing.Point(0, 0);
             this.BtnInicio.Name = "BtnInicio";
-            this.BtnInicio.Size = new System.Drawing.Size(118, 51);
+            this.BtnInicio.Size = new System.Drawing.Size(118, 67);
             this.BtnInicio.TabIndex = 8;
             this.BtnInicio.Text = "🏠Inicio";
             this.BtnInicio.UseVisualStyleBackColor = false;
             this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
-            // 
-            // panelDesign
-            // 
-            this.panelDesign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelDesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.panelDesign.Location = new System.Drawing.Point(0, 0);
-            this.panelDesign.Name = "panelDesign";
-            this.panelDesign.Size = new System.Drawing.Size(4, 100);
-            this.panelDesign.TabIndex = 31;
             // 
             // forminicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(901, 495);
+            this.ClientSize = new System.Drawing.Size(957, 548);
             this.Controls.Add(this.panelTopicos);
             this.Controls.Add(this.panelMenu2);
             this.Controls.Add(this.panelFundo);
