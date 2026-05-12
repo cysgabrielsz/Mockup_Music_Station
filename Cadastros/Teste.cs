@@ -9,24 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mockup_Music_Station
+namespace Mockup_Music_Station.Cadastros
 {
-    public partial class CadastroProfissional : UserControl
-    {    
-        
-        public CadastroProfissional()
+    public partial class Teste : Form
+    {
+        Action funcaoAtualizarLista;
+        public Teste(Action funcao)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            this.funcaoAtualizarLista = funcao;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-        
-
             if (string.IsNullOrWhiteSpace(txtNome.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtSenha.Text) ||
-                string.IsNullOrWhiteSpace(txtTelefone.Text))
+               string.IsNullOrWhiteSpace(txtEmail.Text) ||
+               string.IsNullOrWhiteSpace(txtSenha.Text) ||
+               string.IsNullOrWhiteSpace(txtTelefone.Text))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.");
                 return;
@@ -48,30 +47,13 @@ namespace Mockup_Music_Station
             {
                 MessageBox.Show("Erro ao cadastrar profissional: " + ex.Message);
             }
-        
+            funcaoAtualizarLista?.Invoke();
+            this.Close();
         }
 
-
-        private void FecharTela()
-        {
-            
-
-            Panel painel = this.Parent as Panel;
-
-            if (painel != null)
-            {
-                painel.Controls.Remove(this);
-
-                painel.Visible = false;
-
-                painel.SendToBack();
-            }
-
-            this.Dispose();
-        }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            FecharTela();
+            this.Close();
         }
     }
 }

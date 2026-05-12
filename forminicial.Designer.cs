@@ -321,6 +321,7 @@
             this.Controls.Add(this.panelMenu2);
             this.Controls.Add(this.panelFundo);
             this.Name = "forminicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "forminicial";
             this.panelFundo.ResumeLayout(false);
             this.panelMenu2.ResumeLayout(false);

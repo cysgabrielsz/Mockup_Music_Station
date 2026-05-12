@@ -63,6 +63,12 @@
     <Compile Include="Cadastros\CadastroProfissional.Designer.cs">
       <DependentUpon>CadastroProfissional.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="forminicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="Cadastros\CadastroProfissional.resx">
       <DependentUpon>CadastroProfissional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forminicial.resx">
       <DependentUpon>forminicial.cs</DependentUpon>

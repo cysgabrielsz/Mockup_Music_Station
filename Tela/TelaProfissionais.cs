@@ -11,23 +11,29 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using Mockup_Music_Station.MusicStationDataSetTableAdapters;
 using static Mockup_Music_Station.MusicStationDataSet;
+using System.Runtime.CompilerServices;
+using Mockup_Music_Station.Cadastros;
 
 
 namespace Mockup_Music_Station
 {
     public partial class TelaProfissionais : UserControl
     {
+
+        
         public TelaProfissionais()
         {
             InitializeComponent();
-            ArredondarPanel(panelConteudo, 20);
-            ArredondarPanel(panelUsuarios, 20);
-            ArredondarPanel(panelDados, 20);
-            AtualizarLista();
+            ArredondarPanel(panelListBox, 20);
+            ArredondarPanel(PanelConsulta, 20);
+            ArredondarPanel(panelInformacoes, 20);
+            ArredondarPanel(panelCliente, 20);
+            ArredondarPanel(panelFundoListBox, 20);
+
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
             btnLimpar.Enabled = false;
-            panelCadastros.Visible = false;
+            AtualizarLista();
         }
 
         public void ArredondarPanel(Panel panel, int raio)
@@ -44,6 +50,7 @@ namespace Mockup_Music_Station
             panel.Region = new Region(path);
         }
 
+    
         public void AtualizarLista()
         {
             lboProfissionais.Items.Clear();
@@ -58,7 +65,7 @@ namespace Mockup_Music_Station
         {
             txtNome.Text = "";
             txtEmail.Text = "";
-            txtSenha.Text = "";
+            txtTelefone.Text = "";
         }
 
         private void lboUsuarios_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,8 +75,7 @@ namespace Mockup_Music_Station
             btnDeletar.Enabled = true;
 
             txtNome.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSenha.Enabled = false;
+            txtEmail.Enabled = false;            
             txtTelefone.Enabled = false;
 
             btnAtualizar.Text = "habilitar edição";
@@ -79,8 +85,7 @@ namespace Mockup_Music_Station
             ProfissionaisRow profissional = (ProfissionaisRow)lboProfissionais.SelectedItem;
             if (profissional == null) return;
             txtNome.Text = profissional.nome;
-            txtEmail.Text = profissional.email;
-            txtSenha.Text = profissional.senha;
+            txtEmail.Text = profissional.email;            
             txtTelefone.Text = profissional.telefone;
         }
 
@@ -90,8 +95,7 @@ namespace Mockup_Music_Station
             {
                 btnDeletar.Enabled = true;
                 txtNome.Enabled = true;
-                txtEmail.Enabled = true;
-                txtSenha.Enabled = true;
+                txtEmail.Enabled = true;    
                 txtTelefone.Enabled = true;
                 btnAtualizar.Text = "salvar alterações";
             }
@@ -104,10 +108,9 @@ namespace Mockup_Music_Station
                 {
                     string telefone = txtTelefone.Text;
                     string email = txtEmail.Text;
-                    string senha = txtSenha.Text;
                     string nome = txtNome.Text;
                     ProfissionaisTableAdapter profissionalDados = new ProfissionaisTableAdapter();
-                    profissionalDados.Update(profissional.id_usuario, nome, email, senha, telefone);
+                    profissionalDados.Update(profissional.id_usuario, nome, profissional.senha , email,telefone);
                     MessageBox.Show("Profissional atualizado com sucesso!");
                     AtualizarLista();
                 }
@@ -139,26 +142,7 @@ namespace Mockup_Music_Station
             }
         }
 
-
-        private void AbrirTela(UserControl tela)
-        {
-
-            foreach (Control controle in panelCadastros.Controls)
-            {
-                controle.Dispose();
-            }
-            panelCadastros.Controls.Clear();
-            tela.Dock = DockStyle.Fill;
-            panelCadastros.Controls.Add(tela);
-        }
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            panelCadastros.BringToFront();
-            panelCadastros.Visible = true;
-            CadastroProfissional cadastroProfissional = new CadastroProfissional(this);
-            AbrirTela(cadastroProfissional);
-
-        }
+        
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
@@ -175,6 +159,19 @@ namespace Mockup_Music_Station
                         where linha.nome.ToLower().Contains(textoDigitado.ToLower())
                         select linha;
             foreach (var profissional in dados) lboProfissionais.Items.Add(profissional);
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lboProfissionais.ClearSelected();
+            LimparElementos();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Teste tela = new Teste(AtualizarLista);       
+            tela.ShowDialog();
+
         }
     }
 }

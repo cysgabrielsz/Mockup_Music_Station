@@ -193,5 +193,7 @@ namespace Mockup_Music_Station
             btnDashboard.BackColor = Color.FromArgb(49, 30, 65);
         }
         #endregion
+
+
     }
 }
