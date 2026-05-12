@@ -53,7 +53,10 @@ namespace Mockup_Music_Station.Cadastros
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            
+            Dispose();
             this.Close();
+            
         }
     }
 }

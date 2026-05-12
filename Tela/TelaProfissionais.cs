@@ -165,13 +165,15 @@ namespace Mockup_Music_Station
         {
             lboProfissionais.ClearSelected();
             LimparElementos();
+            btnLimpar.Enabled = false;
+            btnAtualizar.Enabled = false;
+            btnDeletar.Enabled = false;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Teste tela = new Teste(AtualizarLista);       
             tela.ShowDialog();
-
         }
     }
 }
