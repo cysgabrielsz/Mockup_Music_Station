@@ -80,7 +80,7 @@ namespace Mockup_Music_Station
             try
             {
                 ServicosTableAdapter servicosDados = new ServicosTableAdapter();
-                servicosDados.Delete(servicos.id_servico);
+                //servicosDados.Delete(servicos.id_servico);
                 MessageBox.Show("Serviço excluído com sucesso");
                 LimparElementos();
                 AtualizarLista();
@@ -112,7 +112,7 @@ namespace Mockup_Music_Station
                     string descricao = txtDescricao.Text;
                     Decimal preco = Convert.ToDecimal(txtPreco.Text);
                     ServicosTableAdapter servicosDados = new ServicosTableAdapter();
-                    servicosDados.Update(servicos.id_servico, nome, descricao, preco);
+                    //servicosDados.Update(servicos.id_servico, nome, descricao, preco);
                     MessageBox.Show("Serviço atualizado com sucesso!");
                     AtualizarLista();
                 }
