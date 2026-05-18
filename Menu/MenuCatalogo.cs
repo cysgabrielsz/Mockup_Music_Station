@@ -13,6 +13,7 @@ namespace Mockup_Music_Station
 {
     public partial class MenuCatalogo : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public MenuCatalogo()
         {
             InitializeComponent();   
@@ -26,6 +27,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = BtnInstrumentos.Top;
             panelnavegacao.Left = BtnInstrumentos.Left;
             BtnInstrumentos.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaInstrumentos());
         }
 
         private void btnServicos_Click(object sender, EventArgs e)

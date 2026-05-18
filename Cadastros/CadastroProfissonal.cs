@@ -58,5 +58,41 @@ namespace Mockup_Music_Station.Cadastros
             this.Close();
             
         }
+
+        #region PRESS ENTER
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmail.Focus();
+            }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSenha.Focus();
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTelefone.Focus();
+            }
+        }
+
+        private void txtTelefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnCadastrar.PerformClick();
+            }
+        }
+
+        #endregion
     }
 }

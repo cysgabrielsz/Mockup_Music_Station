@@ -83,8 +83,8 @@ namespace Mockup_Music_Station
 
             ClientesRow cliente = (ClientesRow)lboCliente.SelectedItem;
             if (cliente == null) return;
-            //txtNome.Text = cliente.nome;
-            //txtEmail.Text = cliente.email;
+            txtNome.Text = cliente.nome;
+            txtEmail.Text = cliente.email;
             txtTelefone.Text = cliente.telefone;
             txtRua.Text = cliente.rua;
             txtNumero.Text = cliente.numero.ToString();
@@ -115,7 +115,7 @@ namespace Mockup_Music_Station
                     string numero = txtNumero.Text;
                     string nome = txtNome.Text;
                     ClientesTableAdapter clienteDados = new ClientesTableAdapter();
-                    //clienteDados.Update(cliente.id_usuario, nome, email, cliente.senha, rua, numero, telefone);
+                    clienteDados.Update(cliente.id_usuario, nome, email, cliente.senha, rua, numero, telefone);
                     MessageBox.Show("Cliente atualizado com sucesso!");
                     AtualizarLista();
                 }
@@ -136,7 +136,7 @@ namespace Mockup_Music_Station
             try
             {
                 ClientesTableAdapter clienteDados = new ClientesTableAdapter();
-                //clienteDados.Delete(cliente.id_usuario);
+                clienteDados.Delete(cliente.id_usuario);
                 MessageBox.Show("Cliente deletado com sucesso!");
                 LimparElementos();
                 AtualizarLista();
@@ -159,12 +159,25 @@ namespace Mockup_Music_Station
             string textoDigitado = txtPesquisa.Text;
             ClientesTableAdapter clientes = new ClientesTableAdapter();
             var dados = from linha in clientes.GetData()
-                        //where linha.nome.ToLower().Contains(textoDigitado.ToLower())
+                        where linha.nome.ToLower().Contains(textoDigitado.ToLower())
                         select linha;
             foreach (var cliente in dados) lboCliente.Items.Add(cliente);
         }
 
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CadastroCliente cadastro = new CadastroCliente(AtualizarLista);
+            cadastro.ShowDialog();
+        }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lboCliente.ClearSelected();
+            LimparElementos();
+            btnLimpar.Enabled = false;
+            btnAtualizar.Enabled = false;
+            btnDeletar.Enabled = false;
+        }
     }
     
 }

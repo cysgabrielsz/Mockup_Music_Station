@@ -100,6 +100,14 @@ namespace Mockup_Music_Station
             panelDesign.Visible = false;
             MenuCatalogo menuCatalogo = new MenuCatalogo();
             AbrirTela(menuCatalogo);
+
+            //abrindo a tela no painel principal
+            MenuCatalogo menuCatalogo1 = new MenuCatalogo();
+            menuCatalogo1.SolicitarAbertura = (proximatela) =>
+            {
+                ExibirUserControl(proximatela, panelConteudo);
+            };
+            ExibirUserControl(menuCatalogo1, panelMenu);
         }
 
         private void btnOperacional_Click(object sender, EventArgs e)

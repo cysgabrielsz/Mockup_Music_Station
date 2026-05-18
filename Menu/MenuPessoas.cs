@@ -63,6 +63,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnAdministradores.Top;
             panelnavegacao.Left = btnAdministradores.Left;
             btnAdministradores.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaAdminstradores());
         }
 
         private void btnEmpresa_Click(object sender, EventArgs e)
@@ -72,6 +74,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnEmpresa.Top;
             panelnavegacao.Left = btnEmpresa.Left;
             btnEmpresa.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaEmpresas());
         }
 
         private void BtnUsuarios_Leave(object sender, EventArgs e)

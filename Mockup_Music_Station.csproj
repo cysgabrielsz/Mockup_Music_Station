@@ -57,17 +57,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\CadastroProfissional.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Cadastros\CadastroProfissional.Designer.cs">
-      <DependentUpon>CadastroProfissional.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastros\Teste.cs">
+    <Compile Include="Cadastros\CadastroInstrumento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Teste.Designer.cs">
-      <DependentUpon>Teste.cs</DependentUpon>
+    <Compile Include="Cadastros\CadastroInstrumento.Designer.cs">
+      <DependentUpon>CadastroInstrumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CadastroEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CadastroEmpresas.Designer.cs">
+      <DependentUpon>CadastroEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CadastroAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CadastroAdmin.Designer.cs">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CadastroProfissonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CadastroProfissonal.Designer.cs">
+      <DependentUpon>CadastroProfissonal.cs</DependentUpon>
     </Compile>
     <Compile Include="forminicial.cs">
       <SubType>Form</SubType>
@@ -127,6 +145,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tela\TelaServicos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tela\TelaServicos.Designer.cs">
+      <DependentUpon>TelaServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela\TelaInstrumentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tela\TelaInstrumentos.Designer.cs">
+      <DependentUpon>TelaInstrumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela\TelaEmpresas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tela\TelaEmpresas.Designer.cs">
+      <DependentUpon>TelaEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela\TelaAdminstradores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tela\TelaAdminstradores.Designer.cs">
+      <DependentUpon>TelaAdminstradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela\TelaClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,11 +181,20 @@
     <Compile Include="Tela\TelaProfissionais.Designer.cs">
       <DependentUpon>TelaProfissionais.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastros\CadastroProfissional.resx">
-      <DependentUpon>CadastroProfissional.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\CadastroInstrumento.resx">
+      <DependentUpon>CadastroInstrumento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Teste.resx">
-      <DependentUpon>Teste.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\CadastroEmpresas.resx">
+      <DependentUpon>CadastroEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\CadastroAdmin.resx">
+      <DependentUpon>CadastroAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\CadastroProfissonal.resx">
+      <DependentUpon>CadastroProfissonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forminicial.resx">
       <DependentUpon>forminicial.cs</DependentUpon>
@@ -178,8 +229,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tela\TelaServicos.resx">
+      <DependentUpon>TelaServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela\TelaInstrumentos.resx">
+      <DependentUpon>TelaInstrumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela\TelaAdminstradores.resx">
+      <DependentUpon>TelaAdminstradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tela\TelaClientes.resx">
       <DependentUpon>TelaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela\TelaEmpresas.resx">
+      <DependentUpon>TelaEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela\TelaProfissionais.resx">
       <DependentUpon>TelaProfissionais.cs</DependentUpon>

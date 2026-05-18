@@ -114,6 +114,7 @@
             this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "Limpar Seleção";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -126,6 +127,7 @@
             this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Novo Usuario";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnDeletar
             // 
