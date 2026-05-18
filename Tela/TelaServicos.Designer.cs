@@ -308,6 +308,7 @@
             this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Novo Usuario";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnDeletar
             // 

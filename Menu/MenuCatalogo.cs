@@ -38,6 +38,8 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnServicos.Top;
             panelnavegacao.Left = btnServicos.Left;
             btnServicos.BackColor = Color.FromArgb(146, 117, 182);
+
+            SolicitarAbertura?.Invoke(new TelaServicos());
         }
 
         private void btnCargos_Click(object sender, EventArgs e)

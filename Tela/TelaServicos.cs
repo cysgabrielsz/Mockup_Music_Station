@@ -160,7 +160,10 @@ namespace Mockup_Music_Station
             txtPreco.Text = servico.preco.ToString();
         }
 
-
-
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CadastroServicos cadastroServicos = new CadastroServicos(AtualizarLista);
+            cadastroServicos.ShowDialog();
+        }
     }
 }
