@@ -141,9 +141,6 @@
     <Compile Include="Menu\MenuPessoas.Designer.cs">
       <DependentUpon>MenuPessoas.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicStationDataSet.cs">
-      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MusicStationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

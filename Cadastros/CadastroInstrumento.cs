@@ -27,6 +27,8 @@ namespace Mockup_Music_Station
 
             cbEmpresas.ValueMember =
                 "id_empresa";
+
+
             this.funcaoAtualizarLista = funcao;
         }
 
@@ -72,7 +74,7 @@ namespace Mockup_Music_Station
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Dispose();
-            this.Close();
+            this.Close();            
         }
 
         #region

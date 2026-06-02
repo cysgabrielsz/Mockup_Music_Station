@@ -323,6 +323,7 @@
             this.Name = "forminicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "forminicial";
+            this.Load += new System.EventHandler(this.forminicial_Load);
             this.panelFundo.ResumeLayout(false);
             this.panelMenu2.ResumeLayout(false);
             this.panelConfieDashboard.ResumeLayout(false);

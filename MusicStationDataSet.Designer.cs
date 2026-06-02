@@ -66,6 +66,8 @@ namespace Mockup_Music_Station {
         
         private DeletarAdministradorDataTable tableDeletarAdministrador;
         
+        private ObterAdministradoresDataTable tableObterAdministradores;
+        
         private ObterDadosClientesDataTable tableObterDadosClientes;
         
         private ObterDadosInstrumentosDataTable tableObterDadosInstrumentos;
@@ -75,6 +77,10 @@ namespace Mockup_Music_Station {
         private ObterEmpresasDataTable tableObterEmpresas;
         
         private ObterEmpresasComboDataTable tableObterEmpresasCombo;
+        
+        private VerificarUsuarioDataTable tableVerificarUsuario;
+        
+        private global::System.Data.DataRelation relationFK__Avaliacoe__clien__619B8048;
         
         private global::System.Data.DataRelation relationFK__Avaliacoe__servi__628FA481;
         
@@ -86,6 +92,8 @@ namespace Mockup_Music_Station {
         
         private global::System.Data.DataRelation relationFK__Locacao_I__locac__72C60C4A;
         
+        private global::System.Data.DataRelation relationFK__Locacoes__client__6EF57B66;
+        
         private global::System.Data.DataRelation relationFK__Mensagens__chat___01142BA1;
         
         private global::System.Data.DataRelation relationFK__Mensagens__remet__02084FDA;
@@ -96,9 +104,15 @@ namespace Mockup_Music_Station {
         
         private global::System.Data.DataRelation relationFK__Pagamento__pedid__778AC167;
         
+        private global::System.Data.DataRelation relationFK__Pedidos__cliente__4F7CD00D;
+        
         private global::System.Data.DataRelation relationFK__Profissio__id_ca__05D8E0BE;
         
+        private global::System.Data.DataRelation relationFK__Profissio__id_pr__04E4BC85;
+        
         private global::System.Data.DataRelation relationFK__Servicos___pedid__5AEE82B9;
+        
+        private global::System.Data.DataRelation relationFK__Servicos___profi__5CD6CB2B;
         
         private global::System.Data.DataRelation relationFK__Servicos___servi__5BE2A6F2;
         
@@ -195,6 +209,9 @@ namespace Mockup_Music_Station {
                 if ((ds.Tables["DeletarAdministrador"] != null)) {
                     base.Tables.Add(new DeletarAdministradorDataTable(ds.Tables["DeletarAdministrador"]));
                 }
+                if ((ds.Tables["ObterAdministradores"] != null)) {
+                    base.Tables.Add(new ObterAdministradoresDataTable(ds.Tables["ObterAdministradores"]));
+                }
                 if ((ds.Tables["ObterDadosClientes"] != null)) {
                     base.Tables.Add(new ObterDadosClientesDataTable(ds.Tables["ObterDadosClientes"]));
                 }
@@ -209,6 +226,9 @@ namespace Mockup_Music_Station {
                 }
                 if ((ds.Tables["ObterEmpresasCombo"] != null)) {
                     base.Tables.Add(new ObterEmpresasComboDataTable(ds.Tables["ObterEmpresasCombo"]));
+                }
+                if ((ds.Tables["VerificarUsuario"] != null)) {
+                    base.Tables.Add(new VerificarUsuarioDataTable(ds.Tables["VerificarUsuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -442,6 +462,16 @@ namespace Mockup_Music_Station {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ObterAdministradoresDataTable ObterAdministradores {
+            get {
+                return this.tableObterAdministradores;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public ObterDadosClientesDataTable ObterDadosClientes {
             get {
                 return this.tableObterDadosClientes;
@@ -485,6 +515,16 @@ namespace Mockup_Music_Station {
         public ObterEmpresasComboDataTable ObterEmpresasCombo {
             get {
                 return this.tableObterEmpresasCombo;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VerificarUsuarioDataTable VerificarUsuario {
+            get {
+                return this.tableVerificarUsuario;
             }
         }
         
@@ -618,6 +658,9 @@ namespace Mockup_Music_Station {
                 if ((ds.Tables["DeletarAdministrador"] != null)) {
                     base.Tables.Add(new DeletarAdministradorDataTable(ds.Tables["DeletarAdministrador"]));
                 }
+                if ((ds.Tables["ObterAdministradores"] != null)) {
+                    base.Tables.Add(new ObterAdministradoresDataTable(ds.Tables["ObterAdministradores"]));
+                }
                 if ((ds.Tables["ObterDadosClientes"] != null)) {
                     base.Tables.Add(new ObterDadosClientesDataTable(ds.Tables["ObterDadosClientes"]));
                 }
@@ -632,6 +675,9 @@ namespace Mockup_Music_Station {
                 }
                 if ((ds.Tables["ObterEmpresasCombo"] != null)) {
                     base.Tables.Add(new ObterEmpresasComboDataTable(ds.Tables["ObterEmpresasCombo"]));
+                }
+                if ((ds.Tables["VerificarUsuario"] != null)) {
+                    base.Tables.Add(new VerificarUsuarioDataTable(ds.Tables["VerificarUsuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -792,6 +838,12 @@ namespace Mockup_Music_Station {
                     this.tableDeletarAdministrador.InitVars();
                 }
             }
+            this.tableObterAdministradores = ((ObterAdministradoresDataTable)(base.Tables["ObterAdministradores"]));
+            if ((initTable == true)) {
+                if ((this.tableObterAdministradores != null)) {
+                    this.tableObterAdministradores.InitVars();
+                }
+            }
             this.tableObterDadosClientes = ((ObterDadosClientesDataTable)(base.Tables["ObterDadosClientes"]));
             if ((initTable == true)) {
                 if ((this.tableObterDadosClientes != null)) {
@@ -822,18 +874,29 @@ namespace Mockup_Music_Station {
                     this.tableObterEmpresasCombo.InitVars();
                 }
             }
+            this.tableVerificarUsuario = ((VerificarUsuarioDataTable)(base.Tables["VerificarUsuario"]));
+            if ((initTable == true)) {
+                if ((this.tableVerificarUsuario != null)) {
+                    this.tableVerificarUsuario.InitVars();
+                }
+            }
+            this.relationFK__Avaliacoe__clien__619B8048 = this.Relations["FK__Avaliacoe__clien__619B8048"];
             this.relationFK__Avaliacoe__servi__628FA481 = this.Relations["FK__Avaliacoe__servi__628FA481"];
             this.relationFK__Chats__usuario1___52593CB8 = this.Relations["FK__Chats__usuario1___52593CB8"];
             this.relationFK__Chats__usuario2___534D60F1 = this.Relations["FK__Chats__usuario2___534D60F1"];
             this.relationFK__Locacao_I__instr__73BA3083 = this.Relations["FK__Locacao_I__instr__73BA3083"];
             this.relationFK__Locacao_I__locac__72C60C4A = this.Relations["FK__Locacao_I__locac__72C60C4A"];
+            this.relationFK__Locacoes__client__6EF57B66 = this.Relations["FK__Locacoes__client__6EF57B66"];
             this.relationFK__Mensagens__chat___01142BA1 = this.Relations["FK__Mensagens__chat___01142BA1"];
             this.relationFK__Mensagens__remet__02084FDA = this.Relations["FK__Mensagens__remet__02084FDA"];
             this.relationFK__Notificac__usuar__571DF1D5 = this.Relations["FK__Notificac__usuar__571DF1D5"];
             this.relationFK__Pagamento__forma__787EE5A0 = this.Relations["FK__Pagamento__forma__787EE5A0"];
             this.relationFK__Pagamento__pedid__778AC167 = this.Relations["FK__Pagamento__pedid__778AC167"];
+            this.relationFK__Pedidos__cliente__4F7CD00D = this.Relations["FK__Pedidos__cliente__4F7CD00D"];
             this.relationFK__Profissio__id_ca__05D8E0BE = this.Relations["FK__Profissio__id_ca__05D8E0BE"];
+            this.relationFK__Profissio__id_pr__04E4BC85 = this.Relations["FK__Profissio__id_pr__04E4BC85"];
             this.relationFK__Servicos___pedid__5AEE82B9 = this.Relations["FK__Servicos___pedid__5AEE82B9"];
+            this.relationFK__Servicos___profi__5CD6CB2B = this.Relations["FK__Servicos___profi__5CD6CB2B"];
             this.relationFK__Servicos___servi__5BE2A6F2 = this.Relations["FK__Servicos___servi__5BE2A6F2"];
             this.relationFK__Transacoe__pagam__7E37BEF6 = this.Relations["FK__Transacoe__pagam__7E37BEF6"];
         }
@@ -888,6 +951,8 @@ namespace Mockup_Music_Station {
             base.Tables.Add(this.tableUsuarios);
             this.tableDeletarAdministrador = new DeletarAdministradorDataTable();
             base.Tables.Add(this.tableDeletarAdministrador);
+            this.tableObterAdministradores = new ObterAdministradoresDataTable();
+            base.Tables.Add(this.tableObterAdministradores);
             this.tableObterDadosClientes = new ObterDadosClientesDataTable();
             base.Tables.Add(this.tableObterDadosClientes);
             this.tableObterDadosInstrumentos = new ObterDadosInstrumentosDataTable();
@@ -898,6 +963,12 @@ namespace Mockup_Music_Station {
             base.Tables.Add(this.tableObterEmpresas);
             this.tableObterEmpresasCombo = new ObterEmpresasComboDataTable();
             base.Tables.Add(this.tableObterEmpresasCombo);
+            this.tableVerificarUsuario = new VerificarUsuarioDataTable();
+            base.Tables.Add(this.tableVerificarUsuario);
+            this.relationFK__Avaliacoe__clien__619B8048 = new global::System.Data.DataRelation("FK__Avaliacoe__clien__619B8048", new global::System.Data.DataColumn[] {
+                        this.tableClientes.id_clienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAvaliacoes.cliente_idColumn}, false);
+            this.Relations.Add(this.relationFK__Avaliacoe__clien__619B8048);
             this.relationFK__Avaliacoe__servi__628FA481 = new global::System.Data.DataRelation("FK__Avaliacoe__servi__628FA481", new global::System.Data.DataColumn[] {
                         this.tableServicos_Pedidos.id_itemColumn}, new global::System.Data.DataColumn[] {
                         this.tableAvaliacoes.servico_pedido_idColumn}, false);
@@ -918,6 +989,10 @@ namespace Mockup_Music_Station {
                         this.tableLocacoes.id_locacaoColumn}, new global::System.Data.DataColumn[] {
                         this.tableLocacao_Itens.locacao_idColumn}, false);
             this.Relations.Add(this.relationFK__Locacao_I__locac__72C60C4A);
+            this.relationFK__Locacoes__client__6EF57B66 = new global::System.Data.DataRelation("FK__Locacoes__client__6EF57B66", new global::System.Data.DataColumn[] {
+                        this.tableClientes.id_clienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLocacoes.cliente_idColumn}, false);
+            this.Relations.Add(this.relationFK__Locacoes__client__6EF57B66);
             this.relationFK__Mensagens__chat___01142BA1 = new global::System.Data.DataRelation("FK__Mensagens__chat___01142BA1", new global::System.Data.DataColumn[] {
                         this.tableChats.id_chatColumn}, new global::System.Data.DataColumn[] {
                         this.tableMensagens.chat_idColumn}, false);
@@ -938,14 +1013,26 @@ namespace Mockup_Music_Station {
                         this.tablePedidos.id_pedidoColumn}, new global::System.Data.DataColumn[] {
                         this.tablePagamentos.pedido_idColumn}, false);
             this.Relations.Add(this.relationFK__Pagamento__pedid__778AC167);
+            this.relationFK__Pedidos__cliente__4F7CD00D = new global::System.Data.DataRelation("FK__Pedidos__cliente__4F7CD00D", new global::System.Data.DataColumn[] {
+                        this.tableClientes.id_clienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePedidos.cliente_idColumn}, false);
+            this.Relations.Add(this.relationFK__Pedidos__cliente__4F7CD00D);
             this.relationFK__Profissio__id_ca__05D8E0BE = new global::System.Data.DataRelation("FK__Profissio__id_ca__05D8E0BE", new global::System.Data.DataColumn[] {
                         this.tableCargos.id_cargoColumn}, new global::System.Data.DataColumn[] {
                         this.tableProfissional_Cargo.id_cargoColumn}, false);
             this.Relations.Add(this.relationFK__Profissio__id_ca__05D8E0BE);
+            this.relationFK__Profissio__id_pr__04E4BC85 = new global::System.Data.DataRelation("FK__Profissio__id_pr__04E4BC85", new global::System.Data.DataColumn[] {
+                        this.tableProfissionais.id_profissionalColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProfissional_Cargo.id_profissionalColumn}, false);
+            this.Relations.Add(this.relationFK__Profissio__id_pr__04E4BC85);
             this.relationFK__Servicos___pedid__5AEE82B9 = new global::System.Data.DataRelation("FK__Servicos___pedid__5AEE82B9", new global::System.Data.DataColumn[] {
                         this.tablePedidos.id_pedidoColumn}, new global::System.Data.DataColumn[] {
                         this.tableServicos_Pedidos.pedido_idColumn}, false);
             this.Relations.Add(this.relationFK__Servicos___pedid__5AEE82B9);
+            this.relationFK__Servicos___profi__5CD6CB2B = new global::System.Data.DataRelation("FK__Servicos___profi__5CD6CB2B", new global::System.Data.DataColumn[] {
+                        this.tableProfissionais.id_profissionalColumn}, new global::System.Data.DataColumn[] {
+                        this.tableServicos_Pedidos.profissional_idColumn}, false);
+            this.Relations.Add(this.relationFK__Servicos___profi__5CD6CB2B);
             this.relationFK__Servicos___servi__5BE2A6F2 = new global::System.Data.DataRelation("FK__Servicos___servi__5BE2A6F2", new global::System.Data.DataColumn[] {
                         this.tableServicos.id_servicoColumn}, new global::System.Data.DataColumn[] {
                         this.tableServicos_Pedidos.servico_idColumn}, false);
@@ -1084,6 +1171,12 @@ namespace Mockup_Music_Station {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeObterAdministradores() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeObterDadosClientes() {
             return false;
         }
@@ -1109,6 +1202,12 @@ namespace Mockup_Music_Station {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeObterEmpresasCombo() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeVerificarUsuario() {
             return false;
         }
         
@@ -1231,6 +1330,9 @@ namespace Mockup_Music_Station {
         public delegate void DeletarAdministradorRowChangeEventHandler(object sender, DeletarAdministradorRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void ObterAdministradoresRowChangeEventHandler(object sender, ObterAdministradoresRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void ObterDadosClientesRowChangeEventHandler(object sender, ObterDadosClientesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1245,6 +1347,9 @@ namespace Mockup_Music_Station {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void ObterEmpresasComboRowChangeEventHandler(object sender, ObterEmpresasComboRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void VerificarUsuarioRowChangeEventHandler(object sender, VerificarUsuarioRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -1252,11 +1357,13 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AdministradoresDataTable : global::System.Data.TypedTableBase<AdministradoresRow> {
             
-            private global::System.Data.DataColumn columnnivel_acesso;
+            private global::System.Data.DataColumn columnid_admin;
             
             private global::System.Data.DataColumn columndata_criacao;
             
             private global::System.Data.DataColumn columnobservacoes;
+            
+            private global::System.Data.DataColumn columnnivel_acesso;
             
             private global::System.Data.DataColumn columnid_usuario;
             
@@ -1301,9 +1408,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nivel_acessoColumn {
+            public global::System.Data.DataColumn id_adminColumn {
                 get {
-                    return this.columnnivel_acesso;
+                    return this.columnid_admin;
                 }
             }
             
@@ -1320,6 +1427,14 @@ namespace Mockup_Music_Station {
             public global::System.Data.DataColumn observacoesColumn {
                 get {
                     return this.columnobservacoes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nivel_acessoColumn {
+                get {
+                    return this.columnnivel_acesso;
                 }
             }
             
@@ -1392,12 +1507,13 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AdministradoresRow AddAdministradoresRow(string nivel_acesso, System.DateTime data_criacao, string observacoes, string nome, string email, string senha) {
+            public AdministradoresRow AddAdministradoresRow(System.DateTime data_criacao, string observacoes, int nivel_acesso, string nome, string email, string senha) {
                 AdministradoresRow rowAdministradoresRow = ((AdministradoresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nivel_acesso,
+                        null,
                         data_criacao,
                         observacoes,
+                        nivel_acesso,
                         null,
                         nome,
                         email,
@@ -1409,9 +1525,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AdministradoresRow FindByid_usuario(int id_usuario) {
+            public AdministradoresRow FindByid_admin(int id_admin) {
                 return ((AdministradoresRow)(this.Rows.Find(new object[] {
-                            id_usuario})));
+                            id_admin})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1431,9 +1547,10 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnnivel_acesso = base.Columns["nivel_acesso"];
+                this.columnid_admin = base.Columns["id_admin"];
                 this.columndata_criacao = base.Columns["data_criacao"];
                 this.columnobservacoes = base.Columns["observacoes"];
+                this.columnnivel_acesso = base.Columns["nivel_acesso"];
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnnome = base.Columns["nome"];
                 this.columnemail = base.Columns["email"];
@@ -1443,12 +1560,14 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnivel_acesso);
+                this.columnid_admin = new global::System.Data.DataColumn("id_admin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_admin);
                 this.columndata_criacao = new global::System.Data.DataColumn("data_criacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_criacao);
                 this.columnobservacoes = new global::System.Data.DataColumn("observacoes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnobservacoes);
+                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnivel_acesso);
                 this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_usuario);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1458,17 +1577,21 @@ namespace Mockup_Music_Station {
                 this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsenha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_usuario}, true));
-                this.columnnivel_acesso.AllowDBNull = false;
-                this.columnnivel_acesso.MaxLength = 10;
+                                this.columnid_admin}, true));
+                this.columnid_admin.AutoIncrement = true;
+                this.columnid_admin.AutoIncrementSeed = -1;
+                this.columnid_admin.AutoIncrementStep = -1;
+                this.columnid_admin.AllowDBNull = false;
+                this.columnid_admin.ReadOnly = true;
+                this.columnid_admin.Unique = true;
                 this.columndata_criacao.AllowDBNull = false;
                 this.columnobservacoes.MaxLength = 200;
+                this.columnnivel_acesso.AllowDBNull = false;
                 this.columnid_usuario.AutoIncrement = true;
                 this.columnid_usuario.AutoIncrementSeed = -1;
                 this.columnid_usuario.AutoIncrementStep = -1;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnemail.AllowDBNull = false;
@@ -1738,17 +1861,20 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AvaliacoesRow AddAvaliacoesRow(Servicos_PedidosRow parentServicos_PedidosRowByFK__Avaliacoe__servi__628FA481, int cliente_id, int nota, string comentario, System.DateTime data_avaliacao) {
+            public AvaliacoesRow AddAvaliacoesRow(Servicos_PedidosRow parentServicos_PedidosRowByFK__Avaliacoe__servi__628FA481, ClientesRow parentClientesRowByFK__Avaliacoe__clien__619B8048, int nota, string comentario, System.DateTime data_avaliacao) {
                 AvaliacoesRow rowAvaliacoesRow = ((AvaliacoesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        cliente_id,
+                        null,
                         nota,
                         comentario,
                         data_avaliacao};
                 if ((parentServicos_PedidosRowByFK__Avaliacoe__servi__628FA481 != null)) {
                     columnValuesArray[1] = parentServicos_PedidosRowByFK__Avaliacoe__servi__628FA481[0];
+                }
+                if ((parentClientesRowByFK__Avaliacoe__clien__619B8048 != null)) {
+                    columnValuesArray[2] = parentClientesRowByFK__Avaliacoe__clien__619B8048[0];
                 }
                 rowAvaliacoesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAvaliacoesRow);
@@ -2555,6 +2681,8 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ClientesDataTable : global::System.Data.TypedTableBase<ClientesRow> {
             
+            private global::System.Data.DataColumn columnid_cliente;
+            
             private global::System.Data.DataColumn columntelefone;
             
             private global::System.Data.DataColumn columnrua;
@@ -2600,6 +2728,14 @@ namespace Mockup_Music_Station {
             protected ClientesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_clienteColumn {
+                get {
+                    return this.columnid_cliente;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2698,6 +2834,7 @@ namespace Mockup_Music_Station {
             public ClientesRow AddClientesRow(string telefone, string rua, string numero, string nome, string senha, string email) {
                 ClientesRow rowClientesRow = ((ClientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         telefone,
                         rua,
                         numero,
@@ -2712,9 +2849,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientesRow FindByid_usuario(int id_usuario) {
+            public ClientesRow FindByid_cliente(int id_cliente) {
                 return ((ClientesRow)(this.Rows.Find(new object[] {
-                            id_usuario})));
+                            id_cliente})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2734,6 +2871,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_cliente = base.Columns["id_cliente"];
                 this.columntelefone = base.Columns["telefone"];
                 this.columnrua = base.Columns["rua"];
                 this.columnnumero = base.Columns["numero"];
@@ -2746,6 +2884,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_cliente = new global::System.Data.DataColumn("id_cliente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_cliente);
                 this.columntelefone = new global::System.Data.DataColumn("telefone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefone);
                 this.columnrua = new global::System.Data.DataColumn("rua", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2761,7 +2901,13 @@ namespace Mockup_Music_Station {
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_usuario}, true));
+                                this.columnid_cliente}, true));
+                this.columnid_cliente.AutoIncrement = true;
+                this.columnid_cliente.AutoIncrementSeed = -1;
+                this.columnid_cliente.AutoIncrementStep = -1;
+                this.columnid_cliente.AllowDBNull = false;
+                this.columnid_cliente.ReadOnly = true;
+                this.columnid_cliente.Unique = true;
                 this.columntelefone.AllowDBNull = false;
                 this.columntelefone.MaxLength = 20;
                 this.columnrua.AllowDBNull = false;
@@ -2773,7 +2919,6 @@ namespace Mockup_Music_Station {
                 this.columnid_usuario.AutoIncrementStep = -1;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnsenha.AllowDBNull = false;
@@ -2913,6 +3058,8 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EmpresasDataTable : global::System.Data.TypedTableBase<EmpresasRow> {
             
+            private global::System.Data.DataColumn columnid_empresa;
+            
             private global::System.Data.DataColumn columnnome_fantasia;
             
             private global::System.Data.DataColumn columnrazao_social;
@@ -2964,6 +3111,14 @@ namespace Mockup_Music_Station {
             protected EmpresasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_empresaColumn {
+                get {
+                    return this.columnid_empresa;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3086,6 +3241,7 @@ namespace Mockup_Music_Station {
             public EmpresasRow AddEmpresasRow(string nome_fantasia, string razao_social, string cnpj, string email, string telefone, string descricao, System.DateTime data_cadastro, string nome, string senha) {
                 EmpresasRow rowEmpresasRow = ((EmpresasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         nome_fantasia,
                         razao_social,
                         cnpj,
@@ -3103,9 +3259,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmpresasRow FindByid_usuario(int id_usuario) {
+            public EmpresasRow FindByid_empresa(int id_empresa) {
                 return ((EmpresasRow)(this.Rows.Find(new object[] {
-                            id_usuario})));
+                            id_empresa})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3125,6 +3281,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_empresa = base.Columns["id_empresa"];
                 this.columnnome_fantasia = base.Columns["nome_fantasia"];
                 this.columnrazao_social = base.Columns["razao_social"];
                 this.columncnpj = base.Columns["cnpj"];
@@ -3140,6 +3297,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_empresa = new global::System.Data.DataColumn("id_empresa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_empresa);
                 this.columnnome_fantasia = new global::System.Data.DataColumn("nome_fantasia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnome_fantasia);
                 this.columnrazao_social = new global::System.Data.DataColumn("razao_social", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3161,7 +3320,13 @@ namespace Mockup_Music_Station {
                 this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsenha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_usuario}, true));
+                                this.columnid_empresa}, true));
+                this.columnid_empresa.AutoIncrement = true;
+                this.columnid_empresa.AutoIncrementSeed = -1;
+                this.columnid_empresa.AutoIncrementStep = -1;
+                this.columnid_empresa.AllowDBNull = false;
+                this.columnid_empresa.ReadOnly = true;
+                this.columnid_empresa.Unique = true;
                 this.columnnome_fantasia.AllowDBNull = false;
                 this.columnnome_fantasia.MaxLength = 150;
                 this.columnrazao_social.AllowDBNull = false;
@@ -3179,7 +3344,6 @@ namespace Mockup_Music_Station {
                 this.columnid_usuario.AutoIncrementStep = -1;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnsenha.AllowDBNull = false;
@@ -4427,15 +4591,18 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LocacoesRow AddLocacoesRow(int cliente_id, System.DateTime data_inicio, System.DateTime data_fim, decimal valor_total, string status) {
+            public LocacoesRow AddLocacoesRow(ClientesRow parentClientesRowByFK__Locacoes__client__6EF57B66, System.DateTime data_inicio, System.DateTime data_fim, decimal valor_total, string status) {
                 LocacoesRow rowLocacoesRow = ((LocacoesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        cliente_id,
+                        null,
                         data_inicio,
                         data_fim,
                         valor_total,
                         status};
+                if ((parentClientesRowByFK__Locacoes__client__6EF57B66 != null)) {
+                    columnValuesArray[1] = parentClientesRowByFK__Locacoes__client__6EF57B66[0];
+                }
                 rowLocacoesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLocacoesRow);
                 return rowLocacoesRow;
@@ -5800,14 +5967,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PedidosRow AddPedidosRow(int cliente_id, System.DateTime data_pedido, decimal total, string acompanhamento) {
+            public PedidosRow AddPedidosRow(ClientesRow parentClientesRowByFK__Pedidos__cliente__4F7CD00D, System.DateTime data_pedido, decimal total, string acompanhamento) {
                 PedidosRow rowPedidosRow = ((PedidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        cliente_id,
+                        null,
                         data_pedido,
                         total,
                         acompanhamento};
+                if ((parentClientesRowByFK__Pedidos__cliente__4F7CD00D != null)) {
+                    columnValuesArray[1] = parentClientesRowByFK__Pedidos__cliente__4F7CD00D[0];
+                }
                 rowPedidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPedidosRow);
                 return rowPedidosRow;
@@ -6003,6 +6173,8 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ProfissionaisDataTable : global::System.Data.TypedTableBase<ProfissionaisRow> {
             
+            private global::System.Data.DataColumn columnid_profissional;
+            
             private global::System.Data.DataColumn columntelefone;
             
             private global::System.Data.DataColumn columnid_usuario;
@@ -6044,6 +6216,14 @@ namespace Mockup_Music_Station {
             protected ProfissionaisDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_profissionalColumn {
+                get {
+                    return this.columnid_profissional;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6126,6 +6306,7 @@ namespace Mockup_Music_Station {
             public ProfissionaisRow AddProfissionaisRow(string telefone, string nome, string senha, string email) {
                 ProfissionaisRow rowProfissionaisRow = ((ProfissionaisRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         telefone,
                         null,
                         nome,
@@ -6138,9 +6319,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProfissionaisRow FindByid_usuario(int id_usuario) {
+            public ProfissionaisRow FindByid_profissional(int id_profissional) {
                 return ((ProfissionaisRow)(this.Rows.Find(new object[] {
-                            id_usuario})));
+                            id_profissional})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6160,6 +6341,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_profissional = base.Columns["id_profissional"];
                 this.columntelefone = base.Columns["telefone"];
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnnome = base.Columns["nome"];
@@ -6170,6 +6352,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_profissional = new global::System.Data.DataColumn("id_profissional", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_profissional);
                 this.columntelefone = new global::System.Data.DataColumn("telefone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefone);
                 this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
@@ -6181,7 +6365,13 @@ namespace Mockup_Music_Station {
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_usuario}, true));
+                                this.columnid_profissional}, true));
+                this.columnid_profissional.AutoIncrement = true;
+                this.columnid_profissional.AutoIncrementSeed = -1;
+                this.columnid_profissional.AutoIncrementStep = -1;
+                this.columnid_profissional.AllowDBNull = false;
+                this.columnid_profissional.ReadOnly = true;
+                this.columnid_profissional.Unique = true;
                 this.columntelefone.AllowDBNull = false;
                 this.columntelefone.MaxLength = 20;
                 this.columnid_usuario.AutoIncrement = true;
@@ -6189,7 +6379,6 @@ namespace Mockup_Music_Station {
                 this.columnid_usuario.AutoIncrementStep = -1;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnsenha.AllowDBNull = false;
@@ -6419,11 +6608,14 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Profissional_CargoRow AddProfissional_CargoRow(int id_profissional, CargosRow parentCargosRowByFK__Profissio__id_ca__05D8E0BE) {
+            public Profissional_CargoRow AddProfissional_CargoRow(ProfissionaisRow parentProfissionaisRowByFK__Profissio__id_pr__04E4BC85, CargosRow parentCargosRowByFK__Profissio__id_ca__05D8E0BE) {
                 Profissional_CargoRow rowProfissional_CargoRow = ((Profissional_CargoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_profissional,
+                        null,
                         null};
+                if ((parentProfissionaisRowByFK__Profissio__id_pr__04E4BC85 != null)) {
+                    columnValuesArray[0] = parentProfissionaisRowByFK__Profissio__id_pr__04E4BC85[0];
+                }
                 if ((parentCargosRowByFK__Profissio__id_ca__05D8E0BE != null)) {
                     columnValuesArray[1] = parentCargosRowByFK__Profissio__id_ca__05D8E0BE[0];
                 }
@@ -7045,13 +7237,13 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Servicos_PedidosRow AddServicos_PedidosRow(PedidosRow parentPedidosRowByFK__Servicos___pedid__5AEE82B9, ServicosRow parentServicosRowByFK__Servicos___servi__5BE2A6F2, int profissional_id, decimal valor_servico, string observacao) {
+            public Servicos_PedidosRow AddServicos_PedidosRow(PedidosRow parentPedidosRowByFK__Servicos___pedid__5AEE82B9, ServicosRow parentServicosRowByFK__Servicos___servi__5BE2A6F2, ProfissionaisRow parentProfissionaisRowByFK__Servicos___profi__5CD6CB2B, decimal valor_servico, string observacao) {
                 Servicos_PedidosRow rowServicos_PedidosRow = ((Servicos_PedidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        profissional_id,
+                        null,
                         valor_servico,
                         observacao};
                 if ((parentPedidosRowByFK__Servicos___pedid__5AEE82B9 != null)) {
@@ -7059,6 +7251,9 @@ namespace Mockup_Music_Station {
                 }
                 if ((parentServicosRowByFK__Servicos___servi__5BE2A6F2 != null)) {
                     columnValuesArray[2] = parentServicosRowByFK__Servicos___servi__5BE2A6F2[0];
+                }
+                if ((parentProfissionaisRowByFK__Servicos___profi__5CD6CB2B != null)) {
+                    columnValuesArray[3] = parentProfissionaisRowByFK__Servicos___profi__5CD6CB2B[0];
                 }
                 rowServicos_PedidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowServicos_PedidosRow);
@@ -7914,11 +8109,11 @@ namespace Mockup_Music_Station {
             
             private global::System.Data.DataColumn columnusuario_id;
             
-            private global::System.Data.DataColumn columnnivel_acesso;
-            
             private global::System.Data.DataColumn columndata_criacao;
             
             private global::System.Data.DataColumn columnobservacoes;
+            
+            private global::System.Data.DataColumn columnnivel_acesso;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -7971,14 +8166,6 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nivel_acessoColumn {
-                get {
-                    return this.columnnivel_acesso;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn data_criacaoColumn {
                 get {
                     return this.columndata_criacao;
@@ -7990,6 +8177,14 @@ namespace Mockup_Music_Station {
             public global::System.Data.DataColumn observacoesColumn {
                 get {
                     return this.columnobservacoes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nivel_acessoColumn {
+                get {
+                    return this.columnnivel_acesso;
                 }
             }
             
@@ -8030,14 +8225,14 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DeletarAdministradorRow AddDeletarAdministradorRow(int usuario_id, string nivel_acesso, System.DateTime data_criacao, string observacoes) {
+            public DeletarAdministradorRow AddDeletarAdministradorRow(int usuario_id, System.DateTime data_criacao, string observacoes, int nivel_acesso) {
                 DeletarAdministradorRow rowDeletarAdministradorRow = ((DeletarAdministradorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         usuario_id,
-                        nivel_acesso,
                         data_criacao,
-                        observacoes};
+                        observacoes,
+                        nivel_acesso};
                 rowDeletarAdministradorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDeletarAdministradorRow);
                 return rowDeletarAdministradorRow;
@@ -8069,9 +8264,9 @@ namespace Mockup_Music_Station {
             internal void InitVars() {
                 this.columnid_admin = base.Columns["id_admin"];
                 this.columnusuario_id = base.Columns["usuario_id"];
-                this.columnnivel_acesso = base.Columns["nivel_acesso"];
                 this.columndata_criacao = base.Columns["data_criacao"];
                 this.columnobservacoes = base.Columns["observacoes"];
+                this.columnnivel_acesso = base.Columns["nivel_acesso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8081,12 +8276,12 @@ namespace Mockup_Music_Station {
                 base.Columns.Add(this.columnid_admin);
                 this.columnusuario_id = new global::System.Data.DataColumn("usuario_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuario_id);
-                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnivel_acesso);
                 this.columndata_criacao = new global::System.Data.DataColumn("data_criacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_criacao);
                 this.columnobservacoes = new global::System.Data.DataColumn("observacoes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnobservacoes);
+                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnivel_acesso);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_admin}, true));
                 this.columnid_admin.AutoIncrement = true;
@@ -8094,10 +8289,9 @@ namespace Mockup_Music_Station {
                 this.columnid_admin.ReadOnly = true;
                 this.columnid_admin.Unique = true;
                 this.columnusuario_id.AllowDBNull = false;
-                this.columnnivel_acesso.AllowDBNull = false;
-                this.columnnivel_acesso.MaxLength = 10;
                 this.columndata_criacao.AllowDBNull = false;
                 this.columnobservacoes.MaxLength = 200;
+                this.columnnivel_acesso.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8229,7 +8423,380 @@ namespace Mockup_Music_Station {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ObterAdministradoresDataTable : global::System.Data.TypedTableBase<ObterAdministradoresRow> {
+            
+            private global::System.Data.DataColumn columnid_admin;
+            
+            private global::System.Data.DataColumn columnid_usuario;
+            
+            private global::System.Data.DataColumn columnnome;
+            
+            private global::System.Data.DataColumn columnemail;
+            
+            private global::System.Data.DataColumn columnsenha;
+            
+            private global::System.Data.DataColumn columnnivel_acesso;
+            
+            private global::System.Data.DataColumn columndata_criacao;
+            
+            private global::System.Data.DataColumn columnobservacoes;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresDataTable() {
+                this.TableName = "ObterAdministradores";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ObterAdministradoresDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected ObterAdministradoresDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_adminColumn {
+                get {
+                    return this.columnid_admin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_usuarioColumn {
+                get {
+                    return this.columnid_usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nomeColumn {
+                get {
+                    return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn emailColumn {
+                get {
+                    return this.columnemail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn senhaColumn {
+                get {
+                    return this.columnsenha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nivel_acessoColumn {
+                get {
+                    return this.columnnivel_acesso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn data_criacaoColumn {
+                get {
+                    return this.columndata_criacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn observacoesColumn {
+                get {
+                    return this.columnobservacoes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRow this[int index] {
+                get {
+                    return ((ObterAdministradoresRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ObterAdministradoresRowChangeEventHandler ObterAdministradoresRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ObterAdministradoresRowChangeEventHandler ObterAdministradoresRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ObterAdministradoresRowChangeEventHandler ObterAdministradoresRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ObterAdministradoresRowChangeEventHandler ObterAdministradoresRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddObterAdministradoresRow(ObterAdministradoresRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRow AddObterAdministradoresRow(string nome, string email, string senha, int nivel_acesso, System.DateTime data_criacao, string observacoes) {
+                ObterAdministradoresRow rowObterAdministradoresRow = ((ObterAdministradoresRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        nome,
+                        email,
+                        senha,
+                        nivel_acesso,
+                        data_criacao,
+                        observacoes};
+                rowObterAdministradoresRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowObterAdministradoresRow);
+                return rowObterAdministradoresRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRow FindByid_adminid_usuario(int id_admin, int id_usuario) {
+                return ((ObterAdministradoresRow)(this.Rows.Find(new object[] {
+                            id_admin,
+                            id_usuario})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ObterAdministradoresDataTable cln = ((ObterAdministradoresDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ObterAdministradoresDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnid_admin = base.Columns["id_admin"];
+                this.columnid_usuario = base.Columns["id_usuario"];
+                this.columnnome = base.Columns["nome"];
+                this.columnemail = base.Columns["email"];
+                this.columnsenha = base.Columns["senha"];
+                this.columnnivel_acesso = base.Columns["nivel_acesso"];
+                this.columndata_criacao = base.Columns["data_criacao"];
+                this.columnobservacoes = base.Columns["observacoes"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnid_admin = new global::System.Data.DataColumn("id_admin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_admin);
+                this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_usuario);
+                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
+                this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsenha);
+                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnivel_acesso);
+                this.columndata_criacao = new global::System.Data.DataColumn("data_criacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_criacao);
+                this.columnobservacoes = new global::System.Data.DataColumn("observacoes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnobservacoes);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_admin,
+                                this.columnid_usuario}, true));
+                this.columnid_admin.AutoIncrement = true;
+                this.columnid_admin.AllowDBNull = false;
+                this.columnid_admin.ReadOnly = true;
+                this.columnid_usuario.AutoIncrement = true;
+                this.columnid_usuario.AllowDBNull = false;
+                this.columnid_usuario.ReadOnly = true;
+                this.columnnome.AllowDBNull = false;
+                this.columnnome.MaxLength = 200;
+                this.columnemail.AllowDBNull = false;
+                this.columnemail.MaxLength = 256;
+                this.columnsenha.AllowDBNull = false;
+                this.columnsenha.MaxLength = 256;
+                this.columnnivel_acesso.AllowDBNull = false;
+                this.columndata_criacao.AllowDBNull = false;
+                this.columnobservacoes.MaxLength = 200;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRow NewObterAdministradoresRow() {
+                return ((ObterAdministradoresRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ObterAdministradoresRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ObterAdministradoresRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ObterAdministradoresRowChanged != null)) {
+                    this.ObterAdministradoresRowChanged(this, new ObterAdministradoresRowChangeEvent(((ObterAdministradoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ObterAdministradoresRowChanging != null)) {
+                    this.ObterAdministradoresRowChanging(this, new ObterAdministradoresRowChangeEvent(((ObterAdministradoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ObterAdministradoresRowDeleted != null)) {
+                    this.ObterAdministradoresRowDeleted(this, new ObterAdministradoresRowChangeEvent(((ObterAdministradoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ObterAdministradoresRowDeleting != null)) {
+                    this.ObterAdministradoresRowDeleting(this, new ObterAdministradoresRowChangeEvent(((ObterAdministradoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveObterAdministradoresRow(ObterAdministradoresRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MusicStationDataSet ds = new MusicStationDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ObterAdministradoresDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ObterDadosClientesDataTable : global::System.Data.TypedTableBase<ObterDadosClientesRow> {
+            
+            private global::System.Data.DataColumn columnid_cliente;
             
             private global::System.Data.DataColumn columnid_usuario;
             
@@ -8276,6 +8843,14 @@ namespace Mockup_Music_Station {
             protected ObterDadosClientesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_clienteColumn {
+                get {
+                    return this.columnid_cliente;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8375,6 +8950,7 @@ namespace Mockup_Music_Station {
                 ObterDadosClientesRow rowObterDadosClientesRow = ((ObterDadosClientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        null,
                         nome,
                         senha,
                         email,
@@ -8388,8 +8964,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ObterDadosClientesRow FindByid_usuario(int id_usuario) {
+            public ObterDadosClientesRow FindByid_clienteid_usuario(int id_cliente, int id_usuario) {
                 return ((ObterDadosClientesRow)(this.Rows.Find(new object[] {
+                            id_cliente,
                             id_usuario})));
             }
             
@@ -8410,6 +8987,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_cliente = base.Columns["id_cliente"];
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnnome = base.Columns["nome"];
                 this.columnsenha = base.Columns["senha"];
@@ -8422,6 +9000,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_cliente = new global::System.Data.DataColumn("id_cliente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_cliente);
                 this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_usuario);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
@@ -8437,11 +9017,14 @@ namespace Mockup_Music_Station {
                 this.columnnumero = new global::System.Data.DataColumn("numero", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumero);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_cliente,
                                 this.columnid_usuario}, true));
+                this.columnid_cliente.AutoIncrement = true;
+                this.columnid_cliente.AllowDBNull = false;
+                this.columnid_cliente.ReadOnly = true;
                 this.columnid_usuario.AutoIncrement = true;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnsenha.AllowDBNull = false;
@@ -8943,6 +9526,8 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ObterDadosProfissionaisDataTable : global::System.Data.TypedTableBase<ObterDadosProfissionaisRow> {
             
+            private global::System.Data.DataColumn columnid_profissional;
+            
             private global::System.Data.DataColumn columnid_usuario;
             
             private global::System.Data.DataColumn columnnome;
@@ -8984,6 +9569,14 @@ namespace Mockup_Music_Station {
             protected ObterDadosProfissionaisDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_profissionalColumn {
+                get {
+                    return this.columnid_profissional;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9067,6 +9660,7 @@ namespace Mockup_Music_Station {
                 ObterDadosProfissionaisRow rowObterDadosProfissionaisRow = ((ObterDadosProfissionaisRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        null,
                         nome,
                         senha,
                         email,
@@ -9078,8 +9672,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ObterDadosProfissionaisRow FindByid_usuario(int id_usuario) {
+            public ObterDadosProfissionaisRow FindByid_profissionalid_usuario(int id_profissional, int id_usuario) {
                 return ((ObterDadosProfissionaisRow)(this.Rows.Find(new object[] {
+                            id_profissional,
                             id_usuario})));
             }
             
@@ -9100,6 +9695,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_profissional = base.Columns["id_profissional"];
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnnome = base.Columns["nome"];
                 this.columnsenha = base.Columns["senha"];
@@ -9110,6 +9706,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_profissional = new global::System.Data.DataColumn("id_profissional", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_profissional);
                 this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_usuario);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
@@ -9121,11 +9719,14 @@ namespace Mockup_Music_Station {
                 this.columntelefone = new global::System.Data.DataColumn("telefone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntelefone);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_profissional,
                                 this.columnid_usuario}, true));
+                this.columnid_profissional.AutoIncrement = true;
+                this.columnid_profissional.AllowDBNull = false;
+                this.columnid_profissional.ReadOnly = true;
                 this.columnid_usuario.AutoIncrement = true;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnsenha.AllowDBNull = false;
@@ -9267,6 +9868,8 @@ namespace Mockup_Music_Station {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ObterEmpresasDataTable : global::System.Data.TypedTableBase<ObterEmpresasRow> {
             
+            private global::System.Data.DataColumn columnid_empresa;
+            
             private global::System.Data.DataColumn columnid_usuario;
             
             private global::System.Data.DataColumn columnnome;
@@ -9318,6 +9921,14 @@ namespace Mockup_Music_Station {
             protected ObterEmpresasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_empresaColumn {
+                get {
+                    return this.columnid_empresa;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9441,6 +10052,7 @@ namespace Mockup_Music_Station {
                 ObterEmpresasRow rowObterEmpresasRow = ((ObterEmpresasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        null,
                         nome,
                         email,
                         senha,
@@ -9457,8 +10069,9 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ObterEmpresasRow FindByid_usuario(int id_usuario) {
+            public ObterEmpresasRow FindByid_empresaid_usuario(int id_empresa, int id_usuario) {
                 return ((ObterEmpresasRow)(this.Rows.Find(new object[] {
+                            id_empresa,
                             id_usuario})));
             }
             
@@ -9479,6 +10092,7 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnid_empresa = base.Columns["id_empresa"];
                 this.columnid_usuario = base.Columns["id_usuario"];
                 this.columnnome = base.Columns["nome"];
                 this.columnemail = base.Columns["email"];
@@ -9494,6 +10108,8 @@ namespace Mockup_Music_Station {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnid_empresa = new global::System.Data.DataColumn("id_empresa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_empresa);
                 this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_usuario);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
@@ -9515,11 +10131,14 @@ namespace Mockup_Music_Station {
                 this.columndata_cadastro = new global::System.Data.DataColumn("data_cadastro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_cadastro);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_empresa,
                                 this.columnid_usuario}, true));
+                this.columnid_empresa.AutoIncrement = true;
+                this.columnid_empresa.AllowDBNull = false;
+                this.columnid_empresa.ReadOnly = true;
                 this.columnid_usuario.AutoIncrement = true;
                 this.columnid_usuario.AllowDBNull = false;
                 this.columnid_usuario.ReadOnly = true;
-                this.columnid_usuario.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 200;
                 this.columnemail.AllowDBNull = false;
@@ -9939,6 +10558,315 @@ namespace Mockup_Music_Station {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VerificarUsuarioDataTable : global::System.Data.TypedTableBase<VerificarUsuarioRow> {
+            
+            private global::System.Data.DataColumn columnid_usuario;
+            
+            private global::System.Data.DataColumn columnnome;
+            
+            private global::System.Data.DataColumn columnid_admin;
+            
+            private global::System.Data.DataColumn columnnivel_acesso;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioDataTable() {
+                this.TableName = "VerificarUsuario";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VerificarUsuarioDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected VerificarUsuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_usuarioColumn {
+                get {
+                    return this.columnid_usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nomeColumn {
+                get {
+                    return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_adminColumn {
+                get {
+                    return this.columnid_admin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nivel_acessoColumn {
+                get {
+                    return this.columnnivel_acesso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRow this[int index] {
+                get {
+                    return ((VerificarUsuarioRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VerificarUsuarioRowChangeEventHandler VerificarUsuarioRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VerificarUsuarioRowChangeEventHandler VerificarUsuarioRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VerificarUsuarioRowChangeEventHandler VerificarUsuarioRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VerificarUsuarioRowChangeEventHandler VerificarUsuarioRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddVerificarUsuarioRow(VerificarUsuarioRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRow AddVerificarUsuarioRow(string nome, int nivel_acesso) {
+                VerificarUsuarioRow rowVerificarUsuarioRow = ((VerificarUsuarioRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nome,
+                        null,
+                        nivel_acesso};
+                rowVerificarUsuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVerificarUsuarioRow);
+                return rowVerificarUsuarioRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRow FindByid_usuarioid_admin(int id_usuario, int id_admin) {
+                return ((VerificarUsuarioRow)(this.Rows.Find(new object[] {
+                            id_usuario,
+                            id_admin})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VerificarUsuarioDataTable cln = ((VerificarUsuarioDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VerificarUsuarioDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnid_usuario = base.Columns["id_usuario"];
+                this.columnnome = base.Columns["nome"];
+                this.columnid_admin = base.Columns["id_admin"];
+                this.columnnivel_acesso = base.Columns["nivel_acesso"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_usuario);
+                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome);
+                this.columnid_admin = new global::System.Data.DataColumn("id_admin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_admin);
+                this.columnnivel_acesso = new global::System.Data.DataColumn("nivel_acesso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnivel_acesso);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_usuario,
+                                this.columnid_admin}, true));
+                this.columnid_usuario.AutoIncrement = true;
+                this.columnid_usuario.AllowDBNull = false;
+                this.columnid_usuario.ReadOnly = true;
+                this.columnnome.AllowDBNull = false;
+                this.columnnome.MaxLength = 200;
+                this.columnid_admin.AutoIncrement = true;
+                this.columnid_admin.AllowDBNull = false;
+                this.columnid_admin.ReadOnly = true;
+                this.columnnivel_acesso.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRow NewVerificarUsuarioRow() {
+                return ((VerificarUsuarioRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VerificarUsuarioRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VerificarUsuarioRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VerificarUsuarioRowChanged != null)) {
+                    this.VerificarUsuarioRowChanged(this, new VerificarUsuarioRowChangeEvent(((VerificarUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VerificarUsuarioRowChanging != null)) {
+                    this.VerificarUsuarioRowChanging(this, new VerificarUsuarioRowChangeEvent(((VerificarUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VerificarUsuarioRowDeleted != null)) {
+                    this.VerificarUsuarioRowDeleted(this, new VerificarUsuarioRowChangeEvent(((VerificarUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VerificarUsuarioRowDeleting != null)) {
+                    this.VerificarUsuarioRowDeleting(this, new VerificarUsuarioRowChangeEvent(((VerificarUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveVerificarUsuarioRow(VerificarUsuarioRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MusicStationDataSet ds = new MusicStationDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VerificarUsuarioDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AdministradoresRow : global::System.Data.DataRow {
@@ -9954,12 +10882,12 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nivel_acesso {
+            public int id_admin {
                 get {
-                    return ((string)(this[this.tableAdministradores.nivel_acessoColumn]));
+                    return ((int)(this[this.tableAdministradores.id_adminColumn]));
                 }
                 set {
-                    this[this.tableAdministradores.nivel_acessoColumn] = value;
+                    this[this.tableAdministradores.id_adminColumn] = value;
                 }
             }
             
@@ -9987,6 +10915,17 @@ namespace Mockup_Music_Station {
                 }
                 set {
                     this[this.tableAdministradores.observacoesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int nivel_acesso {
+                get {
+                    return ((int)(this[this.tableAdministradores.nivel_acessoColumn]));
+                }
+                set {
+                    this[this.tableAdministradores.nivel_acessoColumn] = value;
                 }
             }
             
@@ -10129,6 +11068,17 @@ namespace Mockup_Music_Station {
                 }
                 set {
                     this[this.tableAvaliacoes.data_avaliacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ClientesRow ClientesRow {
+                get {
+                    return ((ClientesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Avaliacoe__clien__619B8048"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Avaliacoe__clien__619B8048"]);
                 }
             }
             
@@ -10323,6 +11273,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_cliente {
+                get {
+                    return ((int)(this[this.tableClientes.id_clienteColumn]));
+                }
+                set {
+                    this[this.tableClientes.id_clienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string telefone {
                 get {
                     return ((string)(this[this.tableClientes.telefoneColumn]));
@@ -10397,6 +11358,39 @@ namespace Mockup_Music_Station {
                     this[this.tableClientes.emailColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AvaliacoesRow[] GetAvaliacoesRows() {
+                if ((this.Table.ChildRelations["FK__Avaliacoe__clien__619B8048"] == null)) {
+                    return new AvaliacoesRow[0];
+                }
+                else {
+                    return ((AvaliacoesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Avaliacoe__clien__619B8048"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LocacoesRow[] GetLocacoesRows() {
+                if ((this.Table.ChildRelations["FK__Locacoes__client__6EF57B66"] == null)) {
+                    return new LocacoesRow[0];
+                }
+                else {
+                    return ((LocacoesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Locacoes__client__6EF57B66"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PedidosRow[] GetPedidosRows() {
+                if ((this.Table.ChildRelations["FK__Pedidos__cliente__4F7CD00D"] == null)) {
+                    return new PedidosRow[0];
+                }
+                else {
+                    return ((PedidosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pedidos__cliente__4F7CD00D"])));
+                }
+            }
         }
         
         /// <summary>
@@ -10411,6 +11405,17 @@ namespace Mockup_Music_Station {
             internal EmpresasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableEmpresas = ((EmpresasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_empresa {
+                get {
+                    return ((int)(this[this.tableEmpresas.id_empresaColumn]));
+                }
+                set {
+                    this[this.tableEmpresas.id_empresaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10882,6 +11887,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ClientesRow ClientesRow {
+                get {
+                    return ((ClientesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Locacoes__client__6EF57B66"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Locacoes__client__6EF57B66"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isvalor_totalNull() {
                 return this.IsNull(this.tableLocacoes.valor_totalColumn);
             }
@@ -11295,6 +12311,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ClientesRow ClientesRow {
+                get {
+                    return ((ClientesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pedidos__cliente__4F7CD00D"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pedidos__cliente__4F7CD00D"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PagamentosRow[] GetPagamentosRows() {
                 if ((this.Table.ChildRelations["FK__Pagamento__pedid__778AC167"] == null)) {
                     return new PagamentosRow[0];
@@ -11328,6 +12355,17 @@ namespace Mockup_Music_Station {
             internal ProfissionaisRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableProfissionais = ((ProfissionaisDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_profissional {
+                get {
+                    return ((int)(this[this.tableProfissionais.id_profissionalColumn]));
+                }
+                set {
+                    this[this.tableProfissionais.id_profissionalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11384,6 +12422,28 @@ namespace Mockup_Music_Station {
                     this[this.tableProfissionais.emailColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Profissional_CargoRow[] GetProfissional_CargoRows() {
+                if ((this.Table.ChildRelations["FK__Profissio__id_pr__04E4BC85"] == null)) {
+                    return new Profissional_CargoRow[0];
+                }
+                else {
+                    return ((Profissional_CargoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Profissio__id_pr__04E4BC85"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Servicos_PedidosRow[] GetServicos_PedidosRows() {
+                if ((this.Table.ChildRelations["FK__Servicos___profi__5CD6CB2B"] == null)) {
+                    return new Servicos_PedidosRow[0];
+                }
+                else {
+                    return ((Servicos_PedidosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Servicos___profi__5CD6CB2B"])));
+                }
+            }
         }
         
         /// <summary>
@@ -11430,6 +12490,17 @@ namespace Mockup_Music_Station {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Profissio__id_ca__05D8E0BE"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ProfissionaisRow ProfissionaisRow {
+                get {
+                    return ((ProfissionaisRow)(this.GetParentRow(this.Table.ParentRelations["FK__Profissio__id_pr__04E4BC85"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Profissio__id_pr__04E4BC85"]);
                 }
             }
         }
@@ -11597,6 +12668,17 @@ namespace Mockup_Music_Station {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Servicos___pedid__5AEE82B9"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ProfissionaisRow ProfissionaisRow {
+                get {
+                    return ((ProfissionaisRow)(this.GetParentRow(this.Table.ParentRelations["FK__Servicos___profi__5CD6CB2B"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Servicos___profi__5CD6CB2B"]);
                 }
             }
             
@@ -11868,17 +12950,6 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nivel_acesso {
-                get {
-                    return ((string)(this[this.tableDeletarAdministrador.nivel_acessoColumn]));
-                }
-                set {
-                    this[this.tableDeletarAdministrador.nivel_acessoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime data_criacao {
                 get {
                     return ((global::System.DateTime)(this[this.tableDeletarAdministrador.data_criacaoColumn]));
@@ -11906,6 +12977,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int nivel_acesso {
+                get {
+                    return ((int)(this[this.tableDeletarAdministrador.nivel_acessoColumn]));
+                }
+                set {
+                    this[this.tableDeletarAdministrador.nivel_acessoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsobservacoesNull() {
                 return this.IsNull(this.tableDeletarAdministrador.observacoesColumn);
             }
@@ -11914,6 +12996,126 @@ namespace Mockup_Music_Station {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetobservacoesNull() {
                 this[this.tableDeletarAdministrador.observacoesColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ObterAdministradoresRow : global::System.Data.DataRow {
+            
+            private ObterAdministradoresDataTable tableObterAdministradores;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ObterAdministradoresRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableObterAdministradores = ((ObterAdministradoresDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_admin {
+                get {
+                    return ((int)(this[this.tableObterAdministradores.id_adminColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.id_adminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_usuario {
+                get {
+                    return ((int)(this[this.tableObterAdministradores.id_usuarioColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.id_usuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nome {
+                get {
+                    return ((string)(this[this.tableObterAdministradores.nomeColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.nomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string email {
+                get {
+                    return ((string)(this[this.tableObterAdministradores.emailColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.emailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string senha {
+                get {
+                    return ((string)(this[this.tableObterAdministradores.senhaColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.senhaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int nivel_acesso {
+                get {
+                    return ((int)(this[this.tableObterAdministradores.nivel_acessoColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.nivel_acessoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime data_criacao {
+                get {
+                    return ((global::System.DateTime)(this[this.tableObterAdministradores.data_criacaoColumn]));
+                }
+                set {
+                    this[this.tableObterAdministradores.data_criacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string observacoes {
+                get {
+                    try {
+                        return ((string)(this[this.tableObterAdministradores.observacoesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'observacoes\' na tabela \'ObterAdministradores\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableObterAdministradores.observacoesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsobservacoesNull() {
+                return this.IsNull(this.tableObterAdministradores.observacoesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetobservacoesNull() {
+                this[this.tableObterAdministradores.observacoesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -11929,6 +13131,17 @@ namespace Mockup_Music_Station {
             internal ObterDadosClientesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableObterDadosClientes = ((ObterDadosClientesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_cliente {
+                get {
+                    return ((int)(this[this.tableObterDadosClientes.id_clienteColumn]));
+                }
+                set {
+                    this[this.tableObterDadosClientes.id_clienteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12117,6 +13330,17 @@ namespace Mockup_Music_Station {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_profissional {
+                get {
+                    return ((int)(this[this.tableObterDadosProfissionais.id_profissionalColumn]));
+                }
+                set {
+                    this[this.tableObterDadosProfissionais.id_profissionalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int id_usuario {
                 get {
                     return ((int)(this[this.tableObterDadosProfissionais.id_usuarioColumn]));
@@ -12183,6 +13407,17 @@ namespace Mockup_Music_Station {
             internal ObterEmpresasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableObterEmpresas = ((ObterEmpresasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_empresa {
+                get {
+                    return ((int)(this[this.tableObterEmpresas.id_empresaColumn]));
+                }
+                set {
+                    this[this.tableObterEmpresas.id_empresaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12346,6 +13581,65 @@ namespace Mockup_Music_Station {
                 }
                 set {
                     this[this.tableObterEmpresasCombo.nome_fantasiaColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VerificarUsuarioRow : global::System.Data.DataRow {
+            
+            private VerificarUsuarioDataTable tableVerificarUsuario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VerificarUsuarioRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVerificarUsuario = ((VerificarUsuarioDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_usuario {
+                get {
+                    return ((int)(this[this.tableVerificarUsuario.id_usuarioColumn]));
+                }
+                set {
+                    this[this.tableVerificarUsuario.id_usuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nome {
+                get {
+                    return ((string)(this[this.tableVerificarUsuario.nomeColumn]));
+                }
+                set {
+                    this[this.tableVerificarUsuario.nomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_admin {
+                get {
+                    return ((int)(this[this.tableVerificarUsuario.id_adminColumn]));
+                }
+                set {
+                    this[this.tableVerificarUsuario.id_adminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int nivel_acesso {
+                get {
+                    return ((int)(this[this.tableVerificarUsuario.nivel_acessoColumn]));
+                }
+                set {
+                    this[this.tableVerificarUsuario.nivel_acessoColumn] = value;
                 }
             }
         }
@@ -13068,6 +14362,40 @@ namespace Mockup_Music_Station {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class ObterAdministradoresRowChangeEvent : global::System.EventArgs {
+            
+            private ObterAdministradoresRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRowChangeEvent(ObterAdministradoresRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ObterAdministradoresRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class ObterDadosClientesRowChangeEvent : global::System.EventArgs {
             
             private ObterDadosClientesRow eventRow;
@@ -13233,6 +14561,40 @@ namespace Mockup_Music_Station {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class VerificarUsuarioRowChangeEvent : global::System.EventArgs {
+            
+            private VerificarUsuarioRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRowChangeEvent(VerificarUsuarioRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VerificarUsuarioRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace Mockup_Music_Station.MusicStationDataSetTableAdapters {
@@ -13359,9 +14721,10 @@ namespace Mockup_Music_Station.MusicStationDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Administradores";
-            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
+            tableMapping.ColumnMappings.Add("id_admin", "id_admin");
             tableMapping.ColumnMappings.Add("data_criacao", "data_criacao");
             tableMapping.ColumnMappings.Add("observacoes", "observacoes");
+            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("email", "email");
@@ -14748,6 +16111,7 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Clientes";
+            tableMapping.ColumnMappings.Add("id_cliente", "id_cliente");
             tableMapping.ColumnMappings.Add("telefone", "telefone");
             tableMapping.ColumnMappings.Add("rua", "rua");
             tableMapping.ColumnMappings.Add("numero", "numero");
@@ -15127,6 +16491,7 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Empresas";
+            tableMapping.ColumnMappings.Add("id_empresa", "id_empresa");
             tableMapping.ColumnMappings.Add("nome_fantasia", "nome_fantasia");
             tableMapping.ColumnMappings.Add("razao_social", "razao_social");
             tableMapping.ColumnMappings.Add("cnpj", "cnpj");
@@ -15868,13 +17233,13 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
             this._adapter.DeleteCommand.CommandText = "dbo.DeletarInstrumento";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InstrumentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_instrumento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InstrumentoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_empresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "dbo.CadastrarInstrumento";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_instrumento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@empresa_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_empresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descricao", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@preco_locacao", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18386,6 +19751,7 @@ SELECT id_pedido, cliente_id, data_pedido, total, acompanhamento FROM Pedidos WH
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Profissionais";
+            tableMapping.ColumnMappings.Add("id_profissional", "id_profissional");
             tableMapping.ColumnMappings.Add("telefone", "telefone");
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("nome", "nome");
@@ -20503,9 +21869,9 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
             tableMapping.DataSetTable = "DeletarAdministrador";
             tableMapping.ColumnMappings.Add("id_admin", "id_admin");
             tableMapping.ColumnMappings.Add("usuario_id", "usuario_id");
-            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
             tableMapping.ColumnMappings.Add("data_criacao", "data_criacao");
             tableMapping.ColumnMappings.Add("observacoes", "observacoes");
+            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -20560,6 +21926,181 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             MusicStationDataSet.DeletarAdministradorDataTable dataTable = new MusicStationDataSet.DeletarAdministradorDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ObterAdministradoresTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public ObterAdministradoresTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ObterAdministradores";
+            tableMapping.ColumnMappings.Add("id_admin", "id_admin");
+            tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
+            tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("email", "email");
+            tableMapping.ColumnMappings.Add("senha", "senha");
+            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
+            tableMapping.ColumnMappings.Add("data_criacao", "data_criacao");
+            tableMapping.ColumnMappings.Add("observacoes", "observacoes");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Mockup_Music_Station.Properties.Settings.Default.MusicStation;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.ObterAdministradores";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(MusicStationDataSet.ObterAdministradoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual MusicStationDataSet.ObterAdministradoresDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            MusicStationDataSet.ObterAdministradoresDataTable dataTable = new MusicStationDataSet.ObterAdministradoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -20686,6 +22227,7 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ObterDadosClientes";
+            tableMapping.ColumnMappings.Add("id_cliente", "id_cliente");
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("senha", "senha");
@@ -21034,6 +22576,7 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ObterDadosProfissionais";
+            tableMapping.ColumnMappings.Add("id_profissional", "id_profissional");
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("senha", "senha");
@@ -21206,6 +22749,7 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ObterEmpresas";
+            tableMapping.ColumnMappings.Add("id_empresa", "id_empresa");
             tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("email", "email");
@@ -21426,6 +22970,203 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
         public virtual MusicStationDataSet.ObterEmpresasComboDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             MusicStationDataSet.ObterEmpresasComboDataTable dataTable = new MusicStationDataSet.ObterEmpresasComboDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VerificarUsuarioTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public VerificarUsuarioTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VerificarUsuario";
+            tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
+            tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("id_admin", "id_admin");
+            tableMapping.ColumnMappings.Add("nivel_acesso", "nivel_acesso");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Mockup_Music_Station.Properties.Settings.Default.MusicStation;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.VerificarUsuario";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@senha", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(MusicStationDataSet.VerificarUsuarioDataTable dataTable, string usuario, string senha) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((usuario == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(usuario));
+            }
+            if ((senha == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(senha));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual MusicStationDataSet.VerificarUsuarioDataTable GetData(string usuario, string senha) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((usuario == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(usuario));
+            }
+            if ((senha == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(senha));
+            }
+            MusicStationDataSet.VerificarUsuarioDataTable dataTable = new MusicStationDataSet.VerificarUsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -22825,12 +24566,21 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(MusicStationDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._formas_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._clientesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._formas_PagamentoTableAdapter.Update(updatedRows));
+                    result = (result + this._clientesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._pedidosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._pedidosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -22843,12 +24593,21 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._pedidosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._profissionaisTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pedidosTableAdapter.Update(updatedRows));
+                    result = (result + this._profissionaisTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._formas_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._formas_PagamentoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -22870,33 +24629,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cargosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cargosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._chatsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._chatsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._instrumentosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._instrumentosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._locacoesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Locacoes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -22915,12 +24647,30 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._transacoes_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._chatsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._transacoes_PagamentoTableAdapter.Update(updatedRows));
+                    result = (result + this._chatsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cargosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cargosTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._instrumentosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._instrumentosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -22933,12 +24683,12 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._profissionaisTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._profissional_CargoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._profissionaisTableAdapter.Update(updatedRows));
+                    result = (result + this._profissional_CargoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -22978,15 +24728,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._clientesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._avaliacoesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Avaliacoes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -22996,12 +24737,12 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._profissional_CargoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._transacoes_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._profissional_CargoTableAdapter.Update(updatedRows));
+                    result = (result + this._transacoes_PagamentoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -23015,11 +24756,19 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(MusicStationDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._formas_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._clientesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._formas_PagamentoTableAdapter.Update(addedRows));
+                    result = (result + this._clientesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._pedidosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._pedidosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23031,11 +24780,19 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._pedidosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._profissionaisTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pedidosTableAdapter.Update(addedRows));
+                    result = (result + this._profissionaisTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._formas_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._formas_PagamentoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23055,30 +24812,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cargosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cargosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._chatsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._chatsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._instrumentosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._instrumentosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._locacoesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Locacoes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -23095,11 +24828,27 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._transacoes_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._chatsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._transacoes_PagamentoTableAdapter.Update(addedRows));
+                    result = (result + this._chatsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cargosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cargosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._instrumentosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._instrumentosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23111,11 +24860,11 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._profissionaisTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._profissional_CargoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._profissionaisTableAdapter.Update(addedRows));
+                    result = (result + this._profissional_CargoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23151,14 +24900,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._clientesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._avaliacoesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Avaliacoes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -23167,11 +24908,11 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._profissional_CargoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._transacoes_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._profissional_CargoTableAdapter.Update(addedRows));
+                    result = (result + this._transacoes_PagamentoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -23185,11 +24926,11 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(MusicStationDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._profissional_CargoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._transacoes_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._profissional_CargoTableAdapter.Update(deletedRows));
+                    result = (result + this._transacoes_PagamentoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23198,14 +24939,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._avaliacoesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._clientesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._clientesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23241,11 +24974,11 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._profissionaisTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._profissional_CargoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Profissional_Cargo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._profissionaisTableAdapter.Update(deletedRows));
+                    result = (result + this._profissional_CargoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23257,11 +24990,27 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._transacoes_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Transacoes_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._instrumentosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._transacoes_PagamentoTableAdapter.Update(deletedRows));
+                    result = (result + this._instrumentosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cargosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cargosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._chatsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._chatsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23281,30 +25030,6 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._instrumentosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Instrumentos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._instrumentosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._chatsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Chats.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._chatsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cargosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Cargos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cargosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._pagamentosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Pagamentos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -23321,11 +25046,19 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pedidosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._formas_PagamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pedidosTableAdapter.Update(deletedRows));
+                    result = (result + this._formas_PagamentoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._profissionaisTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Profissionais.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._profissionaisTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -23337,11 +25070,19 @@ SELECT id_usuario, nome, email, senha, data_cadastro FROM Usuarios WHERE (id_usu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._formas_PagamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Formas_Pagamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pedidosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Pedidos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._formas_PagamentoTableAdapter.Update(deletedRows));
+                    result = (result + this._pedidosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._clientesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Clientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._clientesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

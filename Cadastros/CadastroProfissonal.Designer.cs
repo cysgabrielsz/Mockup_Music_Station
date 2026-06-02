@@ -176,6 +176,7 @@
             this.txtSenha.ForeColor = System.Drawing.Color.White;
             this.txtSenha.Location = new System.Drawing.Point(63, 181);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(271, 24);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);

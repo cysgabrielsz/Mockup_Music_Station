@@ -14,6 +14,7 @@ namespace Mockup_Music_Station
 {
     public partial class MenuPessoas : UserControl
     {
+        public int NivelAcesso { get; set; }
         public Action<UserControl> SolicitarAbertura;
         public MenuPessoas()
         {
@@ -58,6 +59,11 @@ namespace Mockup_Music_Station
 
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
+            TelaAdminstradores tela = new TelaAdminstradores();
+            tela.NivelAcesso = NivelAcesso;
+            tela.Show();
+
+
             panelnavegacao.Visible = true;
             panelnavegacao.Height = btnAdministradores.Height;
             panelnavegacao.Top = btnAdministradores.Top;

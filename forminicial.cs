@@ -15,13 +15,15 @@ namespace Mockup_Music_Station
 {
     public partial class forminicial : Form
     {
-        
+        public int NivelAcesso { get; set; }
         public forminicial()
         {
             InitializeComponent();                   
             panelnavegacao.Visible = false;   
             panelDesign.Visible = false;
+
         }
+
 
 
         //metodo para abrir as telas dentro do panel
@@ -200,8 +202,20 @@ namespace Mockup_Music_Station
         {
             btnDashboard.BackColor = Color.FromArgb(49, 30, 65);
         }
+
         #endregion
 
+        private void forminicial_Load(object sender, EventArgs e)
+        {
+            if (NivelAcesso == 1)
+            {
+                btnDashboard.Visible = false;
+            }
 
+            MessageBox.Show("Form Inicial: " + NivelAcesso);
+
+        }
+
+    
     }
 }

@@ -15,6 +15,7 @@ namespace Mockup_Music_Station
 {
     public partial class TelaAdminstradores : UserControl
     {
+        public int NivelAcesso { get; set; }
         public TelaAdminstradores()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace Mockup_Music_Station
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
             btnLimpar.Enabled = false;
-            AtualizarLista();
+            AtualizarLista();            
+            
         }
 
         public void ArredondarPanel(Panel panel, int raio)
@@ -57,7 +59,7 @@ namespace Mockup_Music_Station
 
         private void LimparElementos()
         {
-            txtAcesso.Text = "";
+            cbAcesso.Text = "";
             txtEmail.Text = "";
             txtNome.Text = "";
             txtObservacoes.Text = "";
@@ -100,7 +102,7 @@ namespace Mockup_Music_Station
                 btnDeletar.Enabled = true;
                 txtNome.Enabled = true;
                 txtEmail.Enabled = true;
-                txtAcesso.Enabled = true;
+                cbAcesso.Enabled = true;
                 txtObservacoes.Enabled = true;
                 btnAtualizar.Text = "salvar alterações";
             }
@@ -113,7 +115,7 @@ namespace Mockup_Music_Station
                 {                    
                     string email = txtEmail.Text;
                     string nome = txtNome.Text;
-                    string acesso = txtAcesso.Text;
+                    string acesso = cbAcesso.Text;
                     string obeservacoes = txtObservacoes.Text;
                     AdministradoresTableAdapter adminDados = new AdministradoresTableAdapter();
                     adminDados.Update(admin.id_usuario, nome, email, admin.senha, acesso, obeservacoes);
@@ -158,7 +160,7 @@ namespace Mockup_Music_Station
 
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
-            txtAcesso.Enabled = false;
+            cbAcesso.Enabled = false;
             txtObservacoes.Enabled = false;
 
             btnAtualizar.Text = "habilitar edição";
@@ -168,9 +170,22 @@ namespace Mockup_Music_Station
             AdministradoresRow admin = (AdministradoresRow)lboAdministradores.SelectedItem;
             if (admin == null) return;
             txtNome.Text = admin.nome;
-            txtEmail.Text = admin.email;
-            txtAcesso.Text = admin.nivel_acesso;
+            txtEmail.Text = admin.email;            
             txtObservacoes.Text = admin.observacoes;
+        }
+
+        private void TelaAdminstradores_Load(object sender, EventArgs e)
+        {
+
+
+            MessageBox.Show(NivelAcesso.ToString());
+
+            if (NivelAcesso == 1)
+            {
+                btnCadastrar.Visible = false;
+                btnAtualizar.Visible = false;
+                btnDeletar.Visible = false;
+            }
         }
     }
 }

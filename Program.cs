@@ -1,22 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
     internal static class Program
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new forminicial());
+
+            FormLogin entrando = new FormLogin();
+
+            Application.Run(entrando);
+
+            if (entrando.saida)
+            {
+                forminicial tela = new forminicial();
+
+                tela.NivelAcesso = entrando.NivelAcesso;
+
+                entrando.Dispose();
+
+                Application.Run(tela);
+            }
         }
     }
 }

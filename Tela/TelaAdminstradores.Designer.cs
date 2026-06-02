@@ -40,12 +40,12 @@
             this.lblProfissional = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelInformacoes = new System.Windows.Forms.Panel();
+            this.cbAcesso = new System.Windows.Forms.ComboBox();
             this.txtObservacoes = new System.Windows.Forms.TextBox();
             this.lblObsevacoes = new System.Windows.Forms.Label();
             this.lblNivelAcesso = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.txtAcesso = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panelListBox = new System.Windows.Forms.Panel();
@@ -177,18 +177,26 @@
             // panelInformacoes
             // 
             this.panelInformacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
+            this.panelInformacoes.Controls.Add(this.cbAcesso);
             this.panelInformacoes.Controls.Add(this.txtObservacoes);
             this.panelInformacoes.Controls.Add(this.lblObsevacoes);
             this.panelInformacoes.Controls.Add(this.lblNivelAcesso);
             this.panelInformacoes.Controls.Add(this.lblEmail);
             this.panelInformacoes.Controls.Add(this.lblNome);
-            this.panelInformacoes.Controls.Add(this.txtAcesso);
             this.panelInformacoes.Controls.Add(this.txtEmail);
             this.panelInformacoes.Controls.Add(this.txtNome);
             this.panelInformacoes.Location = new System.Drawing.Point(273, 2);
             this.panelInformacoes.Name = "panelInformacoes";
             this.panelInformacoes.Size = new System.Drawing.Size(468, 219);
             this.panelInformacoes.TabIndex = 14;
+            // 
+            // cbAcesso
+            // 
+            this.cbAcesso.FormattingEnabled = true;
+            this.cbAcesso.Location = new System.Drawing.Point(25, 130);
+            this.cbAcesso.Name = "cbAcesso";
+            this.cbAcesso.Size = new System.Drawing.Size(271, 21);
+            this.cbAcesso.TabIndex = 23;
             // 
             // txtObservacoes
             // 
@@ -246,14 +254,6 @@
             this.lblNome.TabIndex = 17;
             this.lblNome.Text = "Nome:";
             // 
-            // txtAcesso
-            // 
-            this.txtAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAcesso.Location = new System.Drawing.Point(25, 127);
-            this.txtAcesso.Name = "txtAcesso";
-            this.txtAcesso.Size = new System.Drawing.Size(271, 24);
-            this.txtAcesso.TabIndex = 15;
-            // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +290,7 @@
             this.panelFundoListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(30)))), ((int)(((byte)(65)))));
             this.panelFundoListBox.Location = new System.Drawing.Point(3, 3);
             this.panelFundoListBox.Name = "panelFundoListBox";
-            this.panelFundoListBox.Size = new System.Drawing.Size(529, 164);
+            this.panelFundoListBox.Size = new System.Drawing.Size(530, 164);
             this.panelFundoListBox.TabIndex = 13;
             // 
             // lboAdministradores
@@ -366,6 +366,7 @@
             this.Controls.Add(this.panelAdministradores);
             this.Name = "TelaAdminstradores";
             this.Size = new System.Drawing.Size(756, 454);
+            this.Load += new System.EventHandler(this.TelaAdminstradores_Load);
             this.panelAdministradores.ResumeLayout(false);
             this.panelAdministradores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -393,13 +394,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.Panel panelInformacoes;
-        private System.Windows.Forms.Label lblNivelAcesso;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtAcesso;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel PanelConsulta;
         private System.Windows.Forms.Label lblPesquisa;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -409,7 +403,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblProfi1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblObsevacoes;
+        private System.Windows.Forms.Panel panelInformacoes;
         private System.Windows.Forms.TextBox txtObservacoes;
+        private System.Windows.Forms.Label lblObsevacoes;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.ComboBox cbAcesso;
+        private System.Windows.Forms.Label lblNivelAcesso;
     }
 }
