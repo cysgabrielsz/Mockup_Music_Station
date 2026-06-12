@@ -8,31 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuPessoas : UserControl
+    public partial class MenuPessoas : TelaBase
     {
-        public int NivelAcesso { get; set; }
-        public Action<UserControl> SolicitarAbertura;
         public MenuPessoas()
         {
             InitializeComponent();
             panelnavegacao.Visible = false;
         }
 
-       
-
-        
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             panelnavegacao.Visible = true;
             panelnavegacao.Height = BtnUsuarios.Height;
             panelnavegacao.Top = BtnUsuarios.Top;
             panelnavegacao.Left = BtnUsuarios.Left;
-            BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);            
-
+            BtnUsuarios.BackColor = Color.FromArgb(146, 117, 182);
         }
 
         private void btnProfissionais_Click(object sender, EventArgs e)
@@ -42,7 +35,6 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnProfissionais.Top;
             panelnavegacao.Left = btnProfissionais.Left;
             btnProfissionais.BackColor = Color.FromArgb(146, 117, 182);
-
             SolicitarAbertura?.Invoke(new TelaProfissionais());
         }
 
@@ -53,24 +45,20 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnClientes.Top;
             panelnavegacao.Left = btnClientes.Left;
             btnClientes.BackColor = Color.FromArgb(146, 117, 182);
-
             SolicitarAbertura?.Invoke(new TelaClientes());
         }
 
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
-            TelaAdminstradores tela = new TelaAdminstradores();
-            tela.NivelAcesso = NivelAcesso;
-            tela.Show();
-
-
             panelnavegacao.Visible = true;
             panelnavegacao.Height = btnAdministradores.Height;
             panelnavegacao.Top = btnAdministradores.Top;
             panelnavegacao.Left = btnAdministradores.Left;
             btnAdministradores.BackColor = Color.FromArgb(146, 117, 182);
 
-            SolicitarAbertura?.Invoke(new TelaAdminstradores());
+            TelaAdminstradores tela = new TelaAdminstradores();
+            tela.NivelAcesso = this.NivelAcesso;
+            SolicitarAbertura?.Invoke(tela);
         }
 
         private void btnEmpresa_Click(object sender, EventArgs e)
@@ -80,7 +68,6 @@ namespace Mockup_Music_Station
             panelnavegacao.Top = btnEmpresa.Top;
             panelnavegacao.Left = btnEmpresa.Left;
             btnEmpresa.BackColor = Color.FromArgb(146, 117, 182);
-
             SolicitarAbertura?.Invoke(new TelaEmpresas());
         }
 

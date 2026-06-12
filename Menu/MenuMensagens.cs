@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuMensagens : UserControl
+    public partial class MenuMensagens : TelaBase
     {
         public MenuMensagens()
         {

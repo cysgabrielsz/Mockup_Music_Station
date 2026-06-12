@@ -148,6 +148,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Tela\TelaServicos.cs">
       <SubType>UserControl</SubType>
     </Compile>

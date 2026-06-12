@@ -11,9 +11,8 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuCatalogo : UserControl
-    {
-        public Action<UserControl> SolicitarAbertura;
+    public partial class MenuCatalogo : TelaBase
+    {        
         public MenuCatalogo()
         {
             InitializeComponent();   

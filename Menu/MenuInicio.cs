@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuInicio : UserControl
+    public partial class MenuInicio : TelaBase
     {
         public MenuInicio()
         {

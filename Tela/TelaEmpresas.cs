@@ -13,7 +13,7 @@ using static Mockup_Music_Station.MusicStationDataSet;
 
 namespace Mockup_Music_Station
 {
-    public partial class TelaEmpresas : UserControl
+    public partial class TelaEmpresas : TelaBase
     {
         public TelaEmpresas()
         {

@@ -13,9 +13,8 @@ using static Mockup_Music_Station.MusicStationDataSet;
 
 namespace Mockup_Music_Station
 {
-    public partial class TelaAdminstradores : UserControl
+    public partial class TelaAdminstradores : TelaBase  // <-- trocado
     {
-        public int NivelAcesso { get; set; }
         public TelaAdminstradores()
         {
             InitializeComponent();
@@ -28,34 +27,29 @@ namespace Mockup_Music_Station
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
             btnLimpar.Enabled = false;
-            AtualizarLista();            
-            
+            AtualizarLista();
         }
 
         public void ArredondarPanel(Panel panel, int raio)
         {
             GraphicsPath path = new GraphicsPath();
-
             path.StartFigure();
             path.AddArc(0, 0, raio, raio, 180, 90);
             path.AddArc(panel.Width - raio, 0, raio, raio, 270, 90);
             path.AddArc(panel.Width - raio, panel.Height - raio, raio, raio, 0, 90);
             path.AddArc(0, panel.Height - raio, raio, raio, 90, 90);
             path.CloseFigure();
-
             panel.Region = new Region(path);
         }
-        
+
         public void AtualizarLista()
         {
             lboAdministradores.Items.Clear();
             AdministradoresTableAdapter AdminDados = new AdministradoresTableAdapter();
             var dados = from linha in AdminDados.GetData()
                         select linha;
-
             foreach (AdministradoresRow dado in dados) lboAdministradores.Items.Add(dado);
         }
-
 
         private void LimparElementos()
         {
@@ -65,6 +59,7 @@ namespace Mockup_Music_Station
             txtObservacoes.Text = "";
             txtPesquisa.Text = "";
         }
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             lboAdministradores.ClearSelected();
@@ -77,10 +72,8 @@ namespace Mockup_Music_Station
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             if (lboAdministradores.SelectedItems == null) return;
-
             AdministradoresRow administradores = lboAdministradores.SelectedItem as AdministradoresRow;
             if (administradores == null) return;
-
             try
             {
                 AdministradoresTableAdapter admin = new AdministradoresTableAdapter();
@@ -112,7 +105,7 @@ namespace Mockup_Music_Station
                 AdministradoresRow admin = (AdministradoresRow)lboAdministradores.SelectedItem;
                 if (admin == null) return;
                 try
-                {                    
+                {
                     string email = txtEmail.Text;
                     string nome = txtNome.Text;
                     string acesso = cbAcesso.Text;
@@ -137,7 +130,6 @@ namespace Mockup_Music_Station
                 AtualizarLista();
                 return;
             }
-
             string textoDigitado = txtPesquisa.Text;
             AdministradoresTableAdapter admin = new AdministradoresTableAdapter();
             var dados = from linha in admin.GetData()
@@ -157,29 +149,22 @@ namespace Mockup_Music_Station
             btnLimpar.Enabled = true;
             btnAtualizar.Enabled = true;
             btnDeletar.Enabled = true;
-
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
             cbAcesso.Enabled = false;
             txtObservacoes.Enabled = false;
-
             btnAtualizar.Text = "habilitar edição";
-
             if (lboAdministradores.SelectedItem == null) return;
-
             AdministradoresRow admin = (AdministradoresRow)lboAdministradores.SelectedItem;
             if (admin == null) return;
             txtNome.Text = admin.nome;
-            txtEmail.Text = admin.email;            
+            txtEmail.Text = admin.email;
             txtObservacoes.Text = admin.observacoes;
         }
 
         private void TelaAdminstradores_Load(object sender, EventArgs e)
         {
-
-
             MessageBox.Show(NivelAcesso.ToString());
-
             if (NivelAcesso == 1)
             {
                 btnCadastrar.Visible = false;

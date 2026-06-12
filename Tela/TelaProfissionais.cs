@@ -17,7 +17,7 @@ using Mockup_Music_Station.Cadastros;
 
 namespace Mockup_Music_Station
 {
-    public partial class TelaProfissionais : UserControl
+    public partial class TelaProfissionais : TelaBase
     {
 
         

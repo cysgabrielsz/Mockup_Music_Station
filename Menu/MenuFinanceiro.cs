@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuFinanceiro : UserControl
+    public partial class MenuFinanceiro : TelaBase
     {
         public MenuFinanceiro()
         {

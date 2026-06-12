@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mockup_Music_Station
 {
-    public partial class MenuOperacional : UserControl
+    public partial class MenuOperacional : TelaBase
     {
         public MenuOperacional()
         {
